@@ -77,8 +77,8 @@ Follow these steps as I tried to put them in a useful order.
 | `POWER` | Long press to turn on. When turned on, click for stand-by. |
 | `START` | Menu |
 | `F + VOLUME` | Change brightness |
-| `B` | OK / SELECT |
-| `A` | CANCEL / BACK |
+| `B` | OK / Select |
+| `A` | Cancel / Back |
 | `F + START` | (in games) Exit Emulator and get back to the main menu |
 
 - **Note**: Shutdown the device: ```Main Menu > Quit > Shutdown System > Yes```
@@ -92,6 +92,22 @@ Follow these steps as I tried to put them in a useful order.
 | Button | Function |
 |-|-|
 *TBD*
+
+### In Game - MAME
+
+| Button | Function |
+|-|-|
+| `LEFT` | Insert coin (not sure if this a preset)|
+| `A` | OK / Select |
+| `B` | Cancel / Back|
+| `L3` | Menu |
+| `F + Y` | Save Game ??? |
+| `F + X` | Load Game |
+| `F + A` | Reset game |
+| `F + R2` | Take screenshot |
+| `F + L2` | Select Shader |
+
+
 
 ## The SD Card
 
