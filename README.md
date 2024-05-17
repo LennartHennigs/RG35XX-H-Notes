@@ -1,2 +1,176 @@
-# RG35XX-H-Notes
-RG35HH-H with Batocera CFW
+# RG35HH-H with Batocera CFW
+
+## Intro
+
+- Batocera is a Linux-based custom firmware (CFW) for retro gaming.
+- There is now a port for the Anbernic RG35XX-H.
+- It provides a better experience than the stock firmware.
+- This document tries to describe how to set it up and use it.
+ 
+--- 
+ - Last updated: 05-17-24
+ - Using Version: rg35xx-cfw V40
+
+## Setting up the device
+
+### Installing Batocera on the RG35XX-H
+
+- Download Batocera for RG35XX-H called [rg35xx-cfw](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases)
+- Flash the firmware to a (new!) SD card (e.g., use [BalenaEtcher](https://etcher.balena.io/))
+- Put the SD card in the device (left slot)
+- Turn on the device (```Longpress on Power Button```)
+- *Device will now update the file structure on the SD card*
+- Consider setting up WiFi (see below)
+- Shut down the device (```Menu > Quit > Shutdown```)
+- Mount the card via your computer
+
+### Setting up WiFi
+
+- `Main Menu > Network Settings`
+- `Main Menu > System Settings > Frontend Developer Options > enable web API access`
+- Now you can find your device in your network
+- IP Address: `Main Menu > Network Settings`
+
+- You can now also download themes and enable scraping and other tools that need an Internet connection
+
+- Emulation Station Web Service: ```http://ipaddress:1234```  \
+``root /  linux``
+- ssh, web, samba
+
+**Note**: *TBD* problems with some networks
+
+### Download Themes
+
+- `Main Menu > Updates & Downloads > Themes > Art-Book-Next-ES`
+- `Main Menu > User Interface Settings > Theme Set`
+
+### Enable Scraping
+
+- A scraper can download game information to your device
+- Register an account at [screenscraper.fr](https://www.screenscraper.fr/)
+- Enter your credentials at `Main Menu > Scraper`
+
+### Enable Retro Achievements
+
+- *TBD*
+
+### Update the ROM List on Each Boot
+
+- ```Main Menu > Games Settings > Netplay Settings > Index new Games```
+
+### Overclock
+
+- ```Main Menu > System Settings > Overclock```
+- *TBD* suggestion?
+
+## Controls
+
+### General Navigation
+
+| Button | Function |
+|-|-|
+| `POWER` | Long press to turn on. When turned on, click for stand-by. |
+| `START` | Menu |
+| `F + VOLUME` | Change brightness |
+| `B` | OK / SELECT |
+| `A` | CANCEL / BACK |
+| `F + START` | (in games) Exit Emulator and get back to the main menu |
+
+- **Note**: Shutdown the device: ```Main Menu > Quit > Shutdown System > Yes```
+- **Note**: `A`+ `B` button assignment can be switched: \
+```Main Menu > System Settings > Frontend Developer Options > Switch Confirm & Cancel Buttons in EmulationStation```
+- **Note**: Link to the [Batocera contols overview](https://wiki.batocera.org/basic_commands)
+
+
+### Main Menu
+
+| Button | Function |
+|-|-|
+*TBD*
+
+## The SD Card
+
+- The SD card has two partitions: ```BATOCERA``` and ```SHARE```. We will only concern ourselves with the ```SHARE``` partition
+- On `SHARE` are the folders for adding content onto the device
+- The ```bios``` folder is the place where to add BIOS files (see below)
+
+- The ```roms``` folder contains folders for the different emulators for your games. Most of the folder names are self-explanatory. See below a list of specific game port folders.
+
+## Bios Files
+
+- Some Emulators need BIOS files to run
+- Check for missing/needed BIOS files via: \
+```Main Menu > Game Settings > Missing Bios Check```
+- Find them online (*TBD*)
+- Copy them in the ```bios```folder
+- Turn on the device
+- Check if they are correct: \
+```Main Menu > Game Settings > Missing Bios Check```
+
+## ROMs
+
+- Check the `_ìnfo.txt` files in each `roms` subfolder
+
+*TBD*
+
+## Workflow for adding content on SD card
+
+- Copy files on the card
+- Remove Apple's dot files, if needed
+- Eject all partitions
+- Put card in RG35XX-H 
+- Power on the device
+- Run the Scraper \
+```Main Menu > Scraper > Scrape Now```
+- Update the Game List \
+```Main Menu > Games Settings > Update Game List```
+- Play
+
+### Removing Apple's Dot Files
+
+- On a Mac, you can run `dot_clean /Volumes/SHARE`
+- ... or `sudo find /Volumes/SHARE -name "._*" -exec -r -rf {}  \;`
+
+## Setting up and Running Ports
+
+### Port Folders
+  
+  This is a list of existing port folders/emulators available on the Batocera CFW by default.
+
+  |Port Folder|Game|
+  |-|-|
+  | [```cannonball```](https://wiki.batocera.org/systems:cannonball)| Out Run - Sega Arcade |
+  | [```devilutionx```](https://wiki.batocera.org/systems:devilutionx) | Diablo & Diablo Hellfire |
+  | [```eduke32```](https://wiki.batocera.org/systems:eduke32)| Duke Nukem 3D |
+  | [```fallout1-ce```](https://github.com/alexbatalov/fallout1-ce) | Fallout 1 |
+  | [```fallout2-ce```](https://github.com/alexbatalov/fallout2-ce) | Fallout 2 |
+  |[```mrboom```](https://wiki.batocera.org/systems:mrboom)| Bomberman|
+  |`ports`| Linux games|
+  | [```prboom```](https://wiki.batocera.org/systems:prboom?s[]=doom) | Doom 1 & Doom 2 |
+  |[```quake3```](https://ioquake3.org/)|Quake 3|
+  | ```scummvm``` | Scumm Engine for Games like Monkey Island |
+  | [```sdlpop```](https://wiki.batocera.org/systems:sdlpop?s[]=sdlpop)| Prince of Persia |
+  | [```tyrquake```](https://wiki.batocera.org/systems:tyrquake?s[]=tyrquake) | Quake 1 |
+  | [```vitaquake2```](https://github.com/libretro/vitaquake2)| Quake 2 |
+  | ```xash3d_fwgs``` | Half-Life and Counterstrike? |
+
+Here is a link to a full list of [available systems of Batocera Linux](https://wiki.batocera.org/systems), which will be larger than for the RG35XX-H but might be helpful.
+
+### Configuring Ports
+
+- *TBD*
+- Half-Life, Quake 1, Duke Nukem, Fallout, Dooms
+
+## Some Terms / What is...
+
+*TBD*
+
+- Batocera Linux
+- CFW
+- Batocera for RG35XX-H
+- EmulationStation
+- Libreto
+
+## Standing on the Shoulder of Giants
+
+- Many of the tips here come from [beanioz on Reddit](https://www.reddit.com/r/RG35XX_Plus/comments/1b2zcyk/batocera_a_few_tips/).
