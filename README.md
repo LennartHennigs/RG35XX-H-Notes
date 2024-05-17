@@ -86,7 +86,6 @@ Follow these steps as I tried to put them in a useful order.
 ```Main Menu > System Settings > Frontend Developer Options > Switch Confirm & Cancel Buttons in EmulationStation```
 - **Note**: Link to the [Batocera contols overview](https://wiki.batocera.org/basic_commands)
 
-
 ### Main Menu
 
 | Button | Function |
@@ -97,7 +96,7 @@ Follow these steps as I tried to put them in a useful order.
 
 | Button | Function |
 |-|-|
-| `LEFT` | Insert coin (not sure if this a preset)|
+| `LEFT` | Insert coin (not sure if this a pre-set) |
 | `A` | OK / Select |
 | `B` | Cancel / Back|
 | `L3` | Menu |
@@ -107,7 +106,16 @@ Follow these steps as I tried to put them in a useful order.
 | `F + R2` | Take screenshot |
 | `F + L2` | Select Shader |
 
+## Other - OD Commander
 
+| Button | Function |
+|-|-|
+| `A` | Cancel / Back |
+| `B` | OK / Select |
+| `SELECT` | Toggle selection of files |
+| `F + X` | File actions, e.g. Delete |
+| `F + Y` | General actions, e.g. Quit |
+| `L2 / R2` | Page up / down |
 
 ## The SD Card
 
@@ -193,3 +201,5 @@ Here is a link to a complete list of [available systems of Batocera Linux](https
 - Libreto
 
 ## Additional Information
+
+- *TBD*
