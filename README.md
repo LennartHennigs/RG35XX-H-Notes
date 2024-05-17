@@ -106,7 +106,7 @@ Follow these steps as I tried to put them in a useful order.
 | `F + R2` | Take screenshot |
 | `F + L2` | Select Shader |
 
-## Other - OD Commander
+### Other - OD Commander
 
 | Button | Function |
 |-|-|
