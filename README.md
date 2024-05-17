@@ -1,15 +1,18 @@
 # RG35HH-H with Batocera CFW
 
+This is my living document describing what I learned setting up the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h). This file will most likely contain errors and vague information. You might not like how I describe things. I am sorry. I can't be held responsible if you break things by following this. Nor will I share with you roms, bioses, or any other files.
+
+ - **Last updated**: 05-17-24
+ - **Using Version**: [Batocera rg35xx-cfw V40](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases/tag/rg35xx_plus_h_batocera_20240306)
+
 ## Intro
 
-- Batocera is a Linux-based custom firmware (CFW) for retro gaming.
+- Batocera is a Linux-based custom firmware (CFW) for retro gaming for multiple devices/platforms.
 - There is now a port for the Anbernic RG35XX-H.
 - It provides a better experience than the stock firmware.
 - This document tries to describe how to set it up and use it.
- 
---- 
- - Last updated: 05-17-24
- - Using Version: rg35xx-cfw V40
+- This is standing on the Shoulder of Giants. Many of the tips here come from [beanioz on Reddit](https://www.reddit.com/r/RG35XX_Plus/comments/1b2zcyk/batocera_a_few_tips/).
+
 
 ## Setting up the device
 
@@ -154,7 +157,7 @@
   | [```vitaquake2```](https://github.com/libretro/vitaquake2)| Quake 2 |
   | ```xash3d_fwgs``` | Half-Life and Counterstrike? |
 
-Here is a link to a full list of [available systems of Batocera Linux](https://wiki.batocera.org/systems), which will be larger than for the RG35XX-H but might be helpful.
+Here is a link to a complete list of [available systems of Batocera Linux](https://wiki.batocera.org/systems), which will be larger than for the RG35XX-H but might be helpful.
 
 ### Configuring Ports
 
@@ -171,6 +174,4 @@ Here is a link to a full list of [available systems of Batocera Linux](https://w
 - EmulationStation
 - Libreto
 
-## Standing on the Shoulder of Giants
-
-- Many of the tips here come from [beanioz on Reddit](https://www.reddit.com/r/RG35XX_Plus/comments/1b2zcyk/batocera_a_few_tips/).
+## Additional Information
