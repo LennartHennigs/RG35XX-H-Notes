@@ -13,7 +13,6 @@ This is a living document describing what I learned setting up the [Anbernic RG3
 - This document tries to describe how to set it up and use it.
 - This is standing on the Shoulder of Giants. Many of the tips here come from [beanioz on Reddit](https://www.reddit.com/r/RG35XX_Plus/comments/1b2zcyk/batocera_a_few_tips/).
 
-
 ## Setting up the device
 
 Follow these steps as I tried to put them in a useful order.
@@ -106,16 +105,18 @@ Follow these steps as I tried to put them in a useful order.
 | `F + R2` | Take screenshot |
 | `F + L2` | Select Shader |
 
-### Other - OD Commander
+### OD Commander
 
 | Button | Function |
 |-|-|
 | `A` | Cancel / Back |
 | `B` | OK / Select |
 | `SELECT` | Toggle selection of files |
-| `F + X` | File actions, e.g. Delete |
-| `F + Y` | General actions, e.g. Quit |
-| `L2 / R2` | Page up / down |
+| `START` | Open the folder in the other tab |
+| `LEFT / RIGHT` | Toggle active tab |
+| `X` | File actions, e.g. Delete |
+| `Y` | General actions, e.g. Quit |
+| `L1 / R1` | Page up / down |
 
 ## The SD Card
 
@@ -185,10 +186,24 @@ Follow these steps as I tried to put them in a useful order.
 
 Here is a link to a complete list of [available systems of Batocera Linux](https://wiki.batocera.org/systems), which will be larger than for the RG35XX-H but might be helpful.
 
-### Configuring Ports
+## Configuring Ports
 
-- *TBD*
-- Half-Life, Quake 1, Duke Nukem, Fallout, Dooms
+- *TBD*: Half-Life, Quake 1, Duke Nukem, Fallout, Dooms
+
+
+### ScummVM
+
+- [ScummVM](https://www.scummvm.org/) is an emulator for adventures such as Monkey Island.
+- Store games in the `roms/scummvm/` folder.
+- Each game has a unique ID. You can find all games and their ID in the [compability list](https://www.scummvm.org/compatibility), e.g. use `atlantis` for **Indiana Jones and the Fate of Atlantis**.
+- Create a folder for each game and copy files into it
+- Inside the folder create a file `[id].scummvm` for each game you want to add. To be sure also write put id into the file.
+- To see what the required files for a game are take a look at the [supported games list](https://wiki.scummvm.org/index.php?title=Category:Supported_Games).
+
+#### Other Links
+
+- [Batocera > ScummVM](https://wiki.batocera.org/systems:scummvm)
+- [Libretro > ScummVM](https://docs.libretro.com/library/scummvm/)
 
 ## Some Terms / What is...
 
