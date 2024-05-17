@@ -1,6 +1,6 @@
-# RG35HH-H with Batocera CFW
+# Batocera on the RG35HH-H
 
-This is my living document describing what I learned setting up the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h). This file will most likely contain errors and vague information. You might not like how I describe things. I am sorry. I can't be held responsible if you break things by following this. Nor will I share with you roms, bioses, or any other files.
+This is a living document describing what I learned setting up the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h). This file will most likely contain errors and vague information. You might not like how I describe things. I am sorry. I can't be held responsible if you break things by following this. Nor will I share with you roms, bioses, or any other files.
 
  - **Last updated**: 05-17-24
  - **Using Version**: [Batocera rg35xx-cfw V40](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases/tag/rg35xx_plus_h_batocera_20240306)
