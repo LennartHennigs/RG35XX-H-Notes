@@ -98,12 +98,12 @@ Follow these steps as I tried to put them in a useful order.
 | `LEFT` | Insert coin (not sure if this a pre-set) |
 | `A` | OK / Select |
 | `B` | Cancel / Back|
-| `L3` | Menu |
-| `F + Y` | Save Game ??? |
-| `F + X` | Load Game |
+| `L3` | Emulator Menu |
+| `F + Y` | Quick save game |
+| `F + X` | Quick soad game |
 | `F + A` | Reset game |
 | `F + R2` | Take screenshot |
-| `F + L2` | Select Shader |
+| `F + L2 / F + R2` | Select Shader |
 
 ### OD Commander
 
@@ -188,7 +188,33 @@ Here is a link to a complete list of [available systems of Batocera Linux](https
 
 ## Configuring Ports
 
+- Always start by reading the `_info.txt` file in the emulators folder.
+
 - *TBD*: Half-Life, Quake 1, Duke Nukem, Fallout, Dooms
+
+### PRBOOM – Doom 1 & Doom 2
+
+- You need to place the `.WAD` files of Doom 1 and/or in the `roms/prboom` folder.
+- Supported wads (non exhaustive list) are from Doom 1, Doom 2, The Ultimate Doom, The Plutonia Experiment, TNT: Evilution
+
+### Doom Controls
+
+| Button | Function |
+|-|-|
+| `LEFT D-PAD` | Movement |
+| `L1 / R1` | Strave |
+| `L2 / R2` | Change weapon |
+| `A` | OK / SELECT|
+| `X` | Fire |
+| `START` | Main Menu |
+| `SELECT` | Map |
+| `F + Y` | Quick save game |
+| `F + X` | Quick load game |
+| `F + X` | Reset game |
+| `F + B` | Emulator menu |
+| `F + R2` | Take screenshot |
+| `F + L2 / F + R2` | Select Shader |
+
 
 
 ### ScummVM
@@ -199,6 +225,8 @@ Here is a link to a complete list of [available systems of Batocera Linux](https
 - Create a folder for each game and copy files into it
 - Inside the folder create a file `[id].scummvm` for each game you want to add. To be sure also write put id into the file.
 - To see what the required files for a game are take a look at the [supported games list](https://wiki.scummvm.org/index.php?title=Category:Supported_Games).
+
+#### ScummVM Controls
 
 | Button | Function |
 |-|-|
