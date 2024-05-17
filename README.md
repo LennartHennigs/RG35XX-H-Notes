@@ -200,6 +200,16 @@ Here is a link to a complete list of [available systems of Batocera Linux](https
 - Inside the folder create a file `[id].scummvm` for each game you want to add. To be sure also write put id into the file.
 - To see what the required files for a game are take a look at the [supported games list](https://wiki.scummvm.org/index.php?title=Category:Supported_Games).
 
+| Button | Function |
+|-|-|
+| `LEFT D-PAD` | Mouse |
+| `START` | Main Menu |
+| `SELECT` | Main Menu |
+| `A` | OK |
+| `X` | Skip |
+| `L2` | Settings, e.g. Save |
+
+
 #### Other Links
 
 - [Batocera > ScummVM](https://wiki.batocera.org/systems:scummvm)
