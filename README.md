@@ -16,6 +16,8 @@ This is a living document describing what I learned setting up the [Anbernic RG3
 
 ## Setting up the device
 
+Follow these steps as I tried to put them in a useful order.
+
 ### Installing Batocera on the RG35XX-H
 
 - Download Batocera for RG35XX-H called [rg35xx-cfw](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases)
