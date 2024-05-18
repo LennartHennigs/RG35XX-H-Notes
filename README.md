@@ -95,8 +95,8 @@ Follow these steps as I tried to put them in a useful order.
 | Button | Function |
 |-|-|
 | `START` | Quick Access |
-| `L1 / L2` | previous emulator |
-| `R1 / R2` | next emulator |
+| `L1 / L2` | Previous emulator |
+| `R1 / R2` | Next emulator |
 | `Y` | Quick Search |
 | `B` | Side Menu |
 
@@ -104,7 +104,7 @@ Follow these steps as I tried to put them in a useful order.
 
 | Button | Function |
 |-|-|
-| `SELECT` | View Optrions |
+| `SELECT` | View Options |
 | `L1 / R1` | Page list up / down |
 | `L2 / R2` | Previous / next emulator |
 | `X` (longpress) | Add / remove to Favorites |
