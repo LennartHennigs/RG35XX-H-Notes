@@ -59,7 +59,7 @@ Follow these steps as I tried to put them in a useful order.
 
 ### Enable Retro Achievements
 
-- Get a login at `https://retroachievements.org/`.
+- Get a login at [retroachievements.org](https://retroachievements.org).
 - Enter your credentials: `Main Menu > Game Settings > Retroarchievement Settings`.
 
 
