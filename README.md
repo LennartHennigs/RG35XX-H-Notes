@@ -38,25 +38,29 @@ Follow these steps as I tried to put them in a useful order.
 - IP Address: `Main Menu > Network Settings`
 
 - You can now also download themes and enable scraping and other tools that need an Internet connection.
-- In addition you can now find your device in your network. You can mount the device to copy data. use SSH or the *Emulation Station Web Service*: `http://[ip address]:1234`.
-- Username / password is: `root /  linux`.
+- In addition you can now find your device in your network. 
+- You can **mount** the device to copy data, **connect via SSH** or the **Emulation Station Web Service**: `http://[ip address]:1234`.
+- Username and password is: `root/linux`.
 
 **Note**: *TBD* problems with some networks
 
 ### Download Themes
+
 - A recommended theme is `Art-Book-Next-ES`: \
 `Main Menu > Updates & Downloads > Themes > Art-Book-Next-ES`
 - `Main Menu > User Interface Settings > Theme Set`
 
 ### Enable Scraping
 
-- A scraper can download game information to your device
-- Register an account at [screenscraper.fr](https://www.screenscraper.fr/)
-- Enter your credentials at `Main Menu > Scraper`
+- A scraper can download game information to your device.
+- Register an account at [screenscraper.fr](https://www.screenscraper.fr/).
+- Enter your credentials at `Main Menu > Scraper`.
 
 ### Enable Retro Achievements
 
-- *TBD*
+- Get a login at `https://retroachievements.org/`.
+- Enter your credentials: `Main Menu > Game Settings > Retroarchievement Settings`.
+
 
 ### Update the ROM List on Each Boot
 
@@ -103,10 +107,12 @@ Follow these steps as I tried to put them in a useful order.
 
 - Some Emulators need BIOS files to run
 - Check for missing/needed BIOS files via: \
-```Main Menu > Game Settings > Missing Bios Check```
-- Find them online (*TBD*)
+```Main Menu > Game Settings > Missing Bios Check```. \
+You can also select `All` to see all possibly needed ROM files.
+- Or [see all needed ROMS](https://github.com/batocera-linux/batocera.linux/blob/master/package/batocera/core/batocera-scripts/scripts/batocera-systems) here.
+- Find them online...
 - Copy them in the ```bios```folder
-- Turn on the device
+- Turn on the device.
 - Check if they are correct: \
 ```Main Menu > Game Settings > Missing Bios Check```
 
@@ -127,12 +133,12 @@ Follow these steps as I tried to put them in a useful order.
 ```Main Menu > Scraper > Scrape Now```
 - Update the Game List \
 ```Main Menu > Games Settings > Update Game List```
-- Play
+- Play!!
 
 ### Removing Apple's Dot Files
 
 - On a Mac, you can run `dot_clean /Volumes/SHARE`
-- ... or `sudo find /Volumes/SHARE -name "._*" -exec -r -rf {}  \;`
+- *TBD*: ... or `sudo find /Volumes/SHARE -name "._*" -exec -r -rf {}  \;`
 
 ## Emulators
 
@@ -233,6 +239,15 @@ Here is a link to a complete list of [available systems of Batocera Linux](https
 | `F + START` | Exit Emulator |
 
 - You can edit the key definitions in the game: `Options > Control Setup > Controller Setup > Button Assignment`. In there `A` and `B`, and `X`and `Y` are reversed.
+- [Batocera > eduke32](https://wiki.batocera.org/systems:eduke32)
+
+### fallout1-ce - Fallout
+
+*TBD*
+
+### fallout2-ce - Fallout
+
+*TBD*
 
 ### PRBOOM – Doom 1 & Doom 2
 
@@ -279,6 +294,10 @@ Here is a link to a complete list of [available systems of Batocera Linux](https
 
 - [Batocera > ScummVM](https://wiki.batocera.org/systems:scummvm)
 - [Libretro > ScummVM](https://docs.libretro.com/library/scummvm/)
+
+### tyrquake - Quake 1
+
+*TBD*
 
 ### xash3d_fwgs - Half-Life
 
