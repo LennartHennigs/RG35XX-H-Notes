@@ -48,7 +48,8 @@ Follow these steps as I tried to put them in a useful order.
 
 - A recommended theme is `Art-Book-Next-ES`: \
 `Main Menu > Updates & Downloads > Themes > Art-Book-Next-ES`
-- `Main Menu > User Interface Settings > Theme Set`
+- Enable your theme: \
+`Main Menu > User Interface Settings > Theme Set`
 
 ### Enable Scraping
 
@@ -86,14 +87,29 @@ Follow these steps as I tried to put them in a useful order.
 
 - **Note**: `A`+ `B` button assignment can be switched: \
 ```Main Menu > System Settings > Frontend Developer Options > Switch Confirm & Cancel Buttons in EmulationStation```. I recommend doing so.
-- **Note**: Link to the [Batocera controls overview](https://wiki.batocera.org/basic_commands)
-- **Note**: Shutdown the device: ```Main Menu > Quit > Shutdown System > Yes```
+- **Note**: Link to the [Batocera controls overview](https://wiki.batocera.org/basic_commands).
+- **Note**: Shutdown the device: ```Main Menu > Quit > Shutdown System > Yes``` or press `F + POWER`.
 
 ### Main Menu
 
 | Button | Function |
 |-|-|
-*TBD*
+| `START` | Quick Access |
+| `L1 / L2` | previous emulator |
+| `R1 / R2` | next emulator |
+| `Y` | Quick Search |
+| `B` | Side Menu |
+
+### Game List
+
+| Button | Function |
+|-|-|
+| `SELECT` | View Optrions |
+| `L1 / R1` | Page list up / down |
+| `L2 / R2` | Previous / next emulator |
+| `X` (longpress) | Add / remove to Favorites |
+| `A` (longpress) | Edit meta data |
+
 
 ## The SD Card
 
@@ -118,17 +134,17 @@ You can also select `All` to see all possibly needed ROM files.
 
 ## ROMs
 
-- Check the `_ìnfo.txt` files in each `roms` subfolder
+- Check the `_ìnfo.txt` files in each `roms` subfolder.
+- *TBD*
 
-*TBD*
 
 ## Workflow for adding content on SD card
 
-- Copy files on the card
-- Remove Apple's dot files, if needed
-- Eject all partitions
-- Put card in RG35XX-H 
-- Power on the device
+- Copy files on the card.
+- Remove Apple's dot files, if needed.
+- Eject all partitions.
+- Put card in RG35XX-H.
+- Power on the device.
 - Run the Scraper \
 ```Main Menu > Scraper > Scrape Now```
 - Update the Game List \
@@ -137,7 +153,7 @@ You can also select `All` to see all possibly needed ROM files.
 
 ### Removing Apple's Dot Files
 
-- On a Mac, you can run `dot_clean /Volumes/SHARE`
+- On a Mac, you can run `dot_clean /Volumes/SHARE`.
 - *TBD*: ... or `sudo find /Volumes/SHARE -name "._*" -exec -r -rf {}  \;`
 
 ## Emulators
@@ -181,7 +197,7 @@ You can also select `All` to see all possibly needed ROM files.
   | [```vitaquake2```](https://github.com/libretro/vitaquake2)| Quake 2 |
   | [```xash3d_fwgs```](https://wiki.batocera.org/systems:xash3d_fwgs) | Half-Life Engine |
 
-Here is a link to a complete list of [available systems of Batocera Linux](https://wiki.batocera.org/systems), which will be larger than for the RG35XX-H but might be helpful.
+- Here is a link to a complete list of [available systems of Batocera Linux](https://wiki.batocera.org/systems), which will be larger than for the RG35XX-H but might be helpful.
 
 ## Configuring Ports
 
