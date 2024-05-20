@@ -108,8 +108,48 @@ Follow these steps as I tried to put them in a useful order.
 | `L1 / R1` | Page list up / down |
 | `L2 / R2` | Previous / next emulator |
 | `X` (longpress) | Add / remove to Favorites |
-| `A` (longpress) | Edit meta data |
+| `A` (longpress) | Edit meta data / Edit keyboard config |
 
+### Mapping Keys to Pad Buttons
+
+- You can define keys to be mapped to buttons (for keyboard controlled system, e.g. Amstrad).
+- To see the current configuration `SELECT > View Pad to Keyboard Information`.
+- To edit it: `A (longpress) > Edit PadToKey Profile`
+- This will create a configuration file in your ROMs folder, either a `.p2k.cfg`or a `.keys` file. 
+- `.p2k.cfg` files have a [config style format](https://wiki.recalbox.com/en/advanced-usage/pad-to-keyboard).
+
+  ``` cfg
+  0:select = j ;; Joystick
+  ```
+
+- `.keys` files are [JSON files](https://wiki.batocera.org/remapping_controls_per_emulator).
+
+  ``` json
+  {
+      "actions_player1": [
+          {
+              "trigger": "select",
+              "type": "key",
+              "target": "KEY_J",
+              "description": "Joystick"
+          }
+  }
+  ```
+
+- It seems that the `.keys` file takes precedence over the `.k2p.cfg` one.
+- You can also create a key config file manually in the folder. Use the name of the rom and append the suffix. 
+- You can then add descriptions to the key definitions.  Both examples above add "Joystick" as a description.
+- In the `.k2p.cfg` files the buttons are called `EAST`, `WEST`. In the `.keys` they are called `A`, `Y`.
+- In the `.key` files `L1`and `R1` are called `pageup` and `pagedown`.
+
+#### Amstrad
+
+- I suggest you bind the virtual keyboard to `R1` by assigning `F9` to it.
+
+  ```
+  0:r1 = F9 ;; Toggle Keyboard
+  ```
+- Amstrad's Return key does not equal to the `enter` key.
 
 ## The SD Card
 
