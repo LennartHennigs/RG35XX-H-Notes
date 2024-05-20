@@ -82,7 +82,6 @@ Follow these steps as I tried to put them in a useful order.
 | `F + VOLUME` | Change brightness |
 | `B` | OK / Select |
 | `A` | Cancel / Back |
-| `F + START` | (in games) Exit Emulator and get back to the main menu |
 | `F + POWER` | Shutdown |
 
 - **Note**: `A`+ `B` button assignment can be switched: \
@@ -142,14 +141,31 @@ Follow these steps as I tried to put them in a useful order.
 - In the `.k2p.cfg` files the buttons are called `EAST`, `WEST`. In the `.keys` they are called `A`, `Y`.
 - In the `.key` files `L1`and `R1` are called `pageup` and `pagedown`.
 
-#### Amstrad
+### In-game (GB, GBA, GB Color, NES, SNES, Sega, PSX)
 
+- *TBD: N64, PSP*
+
+| Button | Function |
+|-|-|
+| `F + START` | Exit Game |
+| `F + RIGHT` | Fast Forward |
+| `F + L1` | Take Screenshot |
+| `F + UP / DOWN` | Select Quck Save Slot |
+| `F + Y` | Quick Save Game |
+| `F + X` | Quick Load Game |
+| `F + A` | Reset Game |
+| `F + R2 / L2` | Select Shader |
+| `F + B` | Emulator Menu|
+
+### Amstrad
+
+- Assign the keys you need to select and start the game.
+- Fire and movement will automatically recognized as joystick input. 
 - I suggest you bind the virtual keyboard to `R1` by assigning `F9` to it.
-
   ```
   0:r1 = F9 ;; Toggle Keyboard
   ```
-- Amstrad's Return key does not equal to the `enter` key.
+- FYI: Amstrad's *return* key does not equal to the `Enter` key.
 
 ## The SD Card
 
