@@ -198,14 +198,14 @@ You can also select `All` to see all possibly needed ROM files.
 
 - You can disable the in-menu music in `Main Menu > Sound Settings > Frontend Music`.
 - Consider disabling `Enable Navigation Sounds`and `Enable Video Preview Audio`there, too.
-- If you get no sound after connecting the device via HDMI, reset the audio output.
-  - Go to: `Main Menu > System Settings > Audio Output".
+- If you get no sound after you connected the console via HDMI, you need to reset the audio output:
+  - Go to: `Main Menu > System Settings > Audio Output`.
   - Select `AudioCodec` and confirm. And then go back to `Auto`.
 
 ## Pairing a Bluetooth Controller
 
-- `Main Menu > Controller & Bluetooth settings > Pain Bloototh Pads Automatically`.
-- Turn on Bluetooth mode on your controller (e.g. `Y + START` for 8bitdo Controller).
+- Go to `Main Menu > Controller & Bluetooth settings > Pain Bloototh Pads Automatically`.
+- Turn on Bluetooth mode on your controller (e.g. `Y + START` on an *8bitdo* Controller).
 - Enable pairing mode on your controller.
 - You you will get a notification when the controller is paired to the console.
 - Run the `Controller Mapping`.
