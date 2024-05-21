@@ -82,7 +82,8 @@ Follow these steps as I tried to put them in a useful order.
 | `F + VOLUME` | Change brightness |
 | `B` | OK / Select |
 | `A` | Cancel / Back |
-| `F + POWER` | Shutdown |
+| `F + POWER` | Quick Shutdown (not saving meta data) |
+| `R3 / L3` | Next / Previous Song (Frontend Music) |
 
 - **Note**: `A`+ `B` button assignment can be switched: \
 ```Main Menu > System Settings > Frontend Developer Options > Switch Confirm & Cancel Buttons in EmulationStation```. I recommend doing so.
@@ -134,7 +135,7 @@ Follow these steps as I tried to put them in a useful order.
           }
   }
   ```
-
+  
 - It seems that the `.keys` file takes precedence over the `.k2p.cfg` one.
 - You can also create a key config file manually in the folder. Use the name of the rom and append the suffix. 
 - You can then add descriptions to the key definitions.  Both examples above add "Joystick" as a description.
@@ -193,6 +194,27 @@ You can also select `All` to see all possibly needed ROM files.
 - Check the `_ìnfo.txt` files in each `roms` subfolder.
 - *TBD*
 
+## Audio Settings
+
+- You can disable the in-menu music in `Main Menu > Sound Settings > Frontend Music`.
+- Consider disabling `Enable Navigation Sounds`and `Enable Video Preview Audio`there, too.
+- If you get no sound after connecting the device via HDMI, reset the audio output.
+  - Go to: `Main Menu > System Settings > Audio Output".
+  - Select `AudioCodec` and confirm. And then go back to `Auto`.
+
+## Pairing a Bluetooth Controller
+
+- `Main Menu > Controller & Bluetooth settings > Pain Bloototh Pads Automatically`.
+- Turn on Bluetooth mode on your controller (e.g. `Y + START` for 8bitdo Controller).
+- Enable pairing mode on your controller.
+- You you will get a notification when the controller is paired to the console.
+- Run the `Controller Mapping`.
+- Adjust the `Player Assignments` to use the controller, e.g.:
+  - P1 > Controller`
+  - P2 > `#0 Deeplay-Keys'
+
+- [Batocera > Controller](https://wiki.batocera.org/supported_controllers)
+
 
 ## Workflow for adding content on SD card
 
@@ -227,8 +249,6 @@ You can also select `All` to see all possibly needed ROM files.
 | `F + A` | Reset game |
 | `F + R2` | Take screenshot |
 | `F + L2 / F + R2` | Select Shader |
-
-
 
 ## Setting up and Running Ports
 
