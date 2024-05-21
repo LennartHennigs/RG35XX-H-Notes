@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 05-20-2024
+## 05-21-2024
 
 - Added [Audio Setup](https://github.com/LennartHennigs/RG35XX-H-Notes/tree/main#audio-settings) section
 - Added [Bluetooth Controller Setup](https://github.com/LennartHennigs/RG35XX-H-Notes/tree/main#pairing-a-bluetooth-controller) section
