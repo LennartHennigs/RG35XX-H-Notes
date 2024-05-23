@@ -167,7 +167,7 @@ Follow these steps as I tried to put them in a useful order.
 | `F + L2 / F + R2` | Select Shader |
 
 
-### Mapping Keys to Pad Buttons
+### Mapping Keys to Pad Buttons For a Single Game
 
 - You can define keys to be mapped to buttons (for keyboard controlled system, e.g. Amstrad).
 - To see the current configuration `SELECT > View Pad to Keyboard Information`.
@@ -202,7 +202,7 @@ Follow these steps as I tried to put them in a useful order.
 
 ### Amstrad
 
-- Assign the keys you need to select and start the game.
+- Assign the keys you need to select and start the game (see above).
 - Fire and movement will automatically recognized as joystick input. 
 - I suggest you bind the virtual keyboard to `R1` by assigning `F9` to it.
   ```
