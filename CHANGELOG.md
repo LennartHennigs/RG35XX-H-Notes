@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 05-23-2024
+
+- Added [DOS Emulator](https://github.com/LennartHennigs/RG35XX-H-Notes/tree/main?tab=readme-ov-file#dos) section
+
 ## 05-21-2024
 
 - Added [Audio Setup](https://github.com/LennartHennigs/RG35XX-H-Notes/tree/main#audio-settings) section
