@@ -75,7 +75,7 @@ Follow these steps as I tried to put them in a useful order.
 
 - ```Main Menu > System Settings > Overclock```
 
-## Audio Settings
+### Audio Settings
 
 - You can disable the in-menu music in `Main Menu > Sound Settings > Frontend Music`.
 - Consider disabling `Enable Navigation Sounds`and `Enable Video Preview Audio`there, too.
@@ -83,7 +83,7 @@ Follow these steps as I tried to put them in a useful order.
   - Go to: `Main Menu > System Settings > Audio Output`.
   - Select `AudioCodec` and confirm. And then go back to `Auto`.
 
-## Pairing a Bluetooth Controller
+### Pairing a Bluetooth Controller
 
 - Go to `Main Menu > Controller & Bluetooth settings > Pain Bloototh Pads Automatically`.
 - Turn on Bluetooth mode on your controller (e.g. `Y + START` on an *8bitdo* Controller).
