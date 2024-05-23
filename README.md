@@ -4,17 +4,20 @@ This is a living document describing what I learned setting up the [Anbernic RG3
 
 If you find this information helpful please consider giving it a ⭐️ at GitHub and maybe [buy me a ☕️](https://ko-fi.com/lennart0815).
 
-- **Last update**: 05-18-24
+- **Last update**: 05-23-24
 - Take a look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/main/CHANGELOG.md) to see any recent updates
 - **Using Version**: [Batocera rg35xx-cfw V40](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases/tag/rg35xx_plus_h_batocera_20240306)
 
 ## Intro
 
 - Batocera is a Linux-based custom firmware (CFW) for retro gaming for multiple devices/platforms.
+- Batocera is 32-bit firmware. 
 - There is now a port for the Anbernic RG35XX-H.
+- The current version is: [Batocera rg35xx-cfw V40](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases/tag/rg35xx_plus_h_batocera_20240306).
 - It provides a better experience than the stock firmware.
 - This document tries to describe how to set it up and use it.
-- This is standing on the Shoulder of Giants. Many of the tips here come from [beanioz on Reddit](https://www.reddit.com/r/RG35XX_Plus/comments/1b2zcyk/batocera_a_few_tips/).
+
+*Note*: This guide is standing on the shoulder of Giants. Many of the tips here come from [beanioz on Reddit](https://www.reddit.com/r/RG35XX_Plus/comments/1b2zcyk/batocera_a_few_tips/) and other people on Reddit.
 
 ## Setting up the device
 
@@ -72,6 +75,27 @@ Follow these steps as I tried to put them in a useful order.
 
 - ```Main Menu > System Settings > Overclock```
 
+## Audio Settings
+
+- You can disable the in-menu music in `Main Menu > Sound Settings > Frontend Music`.
+- Consider disabling `Enable Navigation Sounds`and `Enable Video Preview Audio`there, too.
+- If you get no sound after you connected the console via HDMI, you need to reset the audio output:
+  - Go to: `Main Menu > System Settings > Audio Output`.
+  - Select `AudioCodec` and confirm. And then go back to `Auto`.
+
+## Pairing a Bluetooth Controller
+
+- Go to `Main Menu > Controller & Bluetooth settings > Pain Bloototh Pads Automatically`.
+- Turn on Bluetooth mode on your controller (e.g. `Y + START` on an *8bitdo* Controller).
+- Enable pairing mode on your controller.
+- You you will get a notification when the controller is paired to the console.
+- Run the `Controller Mapping`.
+- Adjust the `Player Assignments` to use the controller, e.g.:
+  - P1 > Controller`
+  - P2 > `#0 Deeplay-Keys'
+
+- [Batocera > Controller](https://wiki.batocera.org/supported_controllers)
+
 ## Controls
 
 ### General Navigation
@@ -111,6 +135,38 @@ Follow these steps as I tried to put them in a useful order.
 | `X` (longpress) | Add / remove to Favorites |
 | `A` (longpress) | Edit meta data / Edit keyboard config |
 
+
+### In-game (GB, GBA, GB Color, NES, SNES, Sega, PSX)
+
+- *TBD: N64, PSP*
+
+| Button | Function |
+|-|-|
+| `F + START` | Exit Game |
+| `F + RIGHT` | Fast Forward |
+| `F + L1` | Take Screenshot |
+| `F + UP / DOWN` | Select Quck Save Slot |
+| `F + Y` | Quick Save Game |
+| `F + X` | Quick Load Game |
+| `F + A` | Reset Game |
+| `F + R2 / L2` | Select Shader |
+| `F + B` | Emulator Menu|
+
+### In-game MAME
+
+| Button | Function |
+|-|-|
+| `LEFT` | Insert coin (not sure if this a pre-set) |
+| `A` | OK / Select |
+| `B` | Cancel / Back|
+| `L3` | Emulator Menu |
+| `F + Y` | Quick save game |
+| `F + X` | Quick soad game |
+| `F + A` | Reset game |
+| `F + R2` | Take screenshot |
+| `F + L2 / F + R2` | Select Shader |
+
+
 ### Mapping Keys to Pad Buttons
 
 - You can define keys to be mapped to buttons (for keyboard controlled system, e.g. Amstrad).
@@ -134,6 +190,7 @@ Follow these steps as I tried to put them in a useful order.
               "target": "KEY_J",
               "description": "Joystick"
           }
+      ]
   }
   ```
   
@@ -142,22 +199,6 @@ Follow these steps as I tried to put them in a useful order.
 - You can then add descriptions to the key definitions.  Both examples above add "Joystick" as a description.
 - In the `.k2p.cfg` files the buttons are called `EAST`, `WEST`. In the `.keys` they are called `A`, `Y`.
 - In the `.key` files `L1`and `R1` are called `pageup` and `pagedown`.
-
-### In-game (GB, GBA, GB Color, NES, SNES, Sega, PSX)
-
-- *TBD: N64, PSP*
-
-| Button | Function |
-|-|-|
-| `F + START` | Exit Game |
-| `F + RIGHT` | Fast Forward |
-| `F + L1` | Take Screenshot |
-| `F + UP / DOWN` | Select Quck Save Slot |
-| `F + Y` | Quick Save Game |
-| `F + X` | Quick Load Game |
-| `F + A` | Reset Game |
-| `F + R2 / L2` | Select Shader |
-| `F + B` | Emulator Menu|
 
 ### Amstrad
 
@@ -177,51 +218,30 @@ Follow these steps as I tried to put them in a useful order.
 
 - The ```roms``` folder contains folders for the different emulators for your games. Most of the folder names are self-explanatory. See below a list of specific game port folders.
 
-## Bios Files
+## BIOS Files
 
-- Some Emulators need BIOS files to run
+- Some Emulators need BIOS files to run.
 - Check for missing/needed BIOS files via: \
 ```Main Menu > Game Settings > Missing Bios Check```. \
 You can also select `All` to see all possibly needed ROM files.
 - Or [see all needed ROMS](https://github.com/batocera-linux/batocera.linux/blob/master/package/batocera/core/batocera-scripts/scripts/batocera-systems) here.
 - Find them online...
-- Copy them in the ```bios```folder
+- Copy them in the ```bios/```folder of your SD card.
 - Turn on the device.
 - Check if they are correct: \
 ```Main Menu > Game Settings > Missing Bios Check```
 
-## ROMs
+## ROM Files
 
-- Check the `_ìnfo.txt` files in each `roms` subfolder.
-- *TBD*
-
-## Audio Settings
-
-- You can disable the in-menu music in `Main Menu > Sound Settings > Frontend Music`.
-- Consider disabling `Enable Navigation Sounds`and `Enable Video Preview Audio`there, too.
-- If you get no sound after you connected the console via HDMI, you need to reset the audio output:
-  - Go to: `Main Menu > System Settings > Audio Output`.
-  - Select `AudioCodec` and confirm. And then go back to `Auto`.
-
-## Pairing a Bluetooth Controller
-
-- Go to `Main Menu > Controller & Bluetooth settings > Pain Bloototh Pads Automatically`.
-- Turn on Bluetooth mode on your controller (e.g. `Y + START` on an *8bitdo* Controller).
-- Enable pairing mode on your controller.
-- You you will get a notification when the controller is paired to the console.
-- Run the `Controller Mapping`.
-- Adjust the `Player Assignments` to use the controller, e.g.:
-  - P1 > Controller`
-  - P2 > `#0 Deeplay-Keys'
-
-- [Batocera > Controller](https://wiki.batocera.org/supported_controllers)
-
+- Find them online...
+- Copy your files in the different 'roms/' folder.
+- Check the `_ìnfo.txt` files in each `roms` subfolder for information on file format and folder structure to set things up.
 
 ## Workflow for adding content on SD card
 
 - Copy files on the card.
 - Remove Apple's dot files, if needed.
-- Eject all partitions.
+- Eject all mounted partitions.
 - Put card in RG35XX-H.
 - Power on the device.
 - Run the Scraper \
@@ -237,19 +257,29 @@ You can also select `All` to see all possibly needed ROM files.
 
 ## Emulators
 
-### MAME
+### DOS
+
+- There are different DOS emulator that you can choose. Per default `DOSBox Pure` is used.
+- Copy a game folder to `roms/dos`.
+- Add `.DOS` to the end of the folder name.
+- If there is a `dosbox.conf`file in the game folder, its settings will be applied.
+- If there is a `dosbox.bat`file in the game folder, it will be executed.
+- If you start the game without a `dosbox.bat`file, you will get the start menu where you can select a file as the default executable. Use the right joystick and the `Y`key to select a file. You can also select a timeout, where the first X frames after starting a game are not shown.
+- After selecting an executable it will be run and file called `AUTOBOOT.DBP` will be created.
+- If you press `L3`, a keyboard overlay will be shown. 
+-On the top-left of the overlay keyboard there is an option to manual map keys. I think this is preferable to use the Batocera key mapping.
 
 | Button | Function |
 |-|-|
-| `LEFT` | Insert coin (not sure if this a pre-set) |
-| `A` | OK / Select |
-| `B` | Cancel / Back|
-| `L3` | Emulator Menu |
-| `F + Y` | Quick save game |
-| `F + X` | Quick soad game |
-| `F + A` | Reset game |
-| `F + R2` | Take screenshot |
-| `F + L2 / F + R2` | Select Shader |
+| `L3` | Show Keyboard (and Keyboard Mapper button) |
+| `LEFT JOYSTICK` | Mouse |
+| `F + UP /DOWN` | Load / Save |
+| `F + RIGHT` | Fast Forward |
+| `Y` | OK |
+
+- [Batocera > DOSBox Pure](https://wiki.batocera.org/systems:dos)
+- [DOSBox Pure](https://github.com/schellingb/dosbox-pure)
+- [`dosbox.conf` Settings](https://www.dosbox.com/wiki/Dosbox.conf)
 
 ## Setting up and Running Ports
 
