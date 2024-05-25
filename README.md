@@ -180,9 +180,9 @@ Follow these steps as I tried to put them in a useful order.
 | `F + R2` | Take screenshot |
 | `F + L2 / F + R2` | Select Shader |
 
-### Port Controls
+### Other Controls
 
-See the [Ports](#setting-up-and-running-ports) section.
+See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
 
 ### Mapping Keys to Pad Buttons For a Single Game
 
@@ -272,7 +272,7 @@ You can also select `All` to see all possibly needed ROM files.
 ### Removing Apple's Dot Files
 
 - On a Mac, you can run `dot_clean /Volumes/SHARE`.
-- *TBD*: ... or `sudo find /Volumes/SHARE -name "._*" -exec -r -rf {}  \;`
+- Create a [.dot_clean](#dot_clean) script in your `ports` folder.
 
 ## Emulators
 
@@ -522,6 +522,19 @@ It is pre-installed on the device and can be found in the *Port* section.
 | `X` | File actions, e.g. Delete |
 | `Y` | General actions, e.g. Quit |
 | `L1 / R1` | Page up / down |
+
+### .dot_clean
+
+- Lets add a simple script that deletes all Mac dot_files.
+- Create a file called `.dot_clean.sh` in `roms/ports` with the following content:
+
+``` sh
+#!/bin/bash
+
+# remove all ._* files from the system
+find /userdata/ -name "._*" -exec rm {} \;
+
+```
 
 #### Links
 
