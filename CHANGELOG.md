@@ -1,9 +1,5 @@
 # CHANGELOG
 
-## 05-26-2024
-
-- Added [Quick Load / Save](https://github.com/LennartHennigs/RG35XX-H-Notes##quick-load--save) commands
-
 ## 05-25-2024
 
 - Added [Fallout 1](https://github.com/LennartHennigs/RG35XX-H-Notes#fallout1-ce---fallout-1) installation and keyboard setup instructions

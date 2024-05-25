@@ -129,7 +129,7 @@ Follow these steps to set up get Batocera running on your device. I tried to put
 `Main Menu > System Settings > Frontend Developer Options > Switch Confirm & Cancel Buttons in EmulationStation`. I recommend doing so.
 - Shutdown the device: `Main Menu > Quit > Shutdown System > Yes` or press `F + POWER`.
 
-#### Links
+#### Links 
 
 - [Batocera > Controls Overview](https://wiki.batocera.org/basic_commands).
 
@@ -152,14 +152,6 @@ Follow these steps to set up get Batocera running on your device. I tried to put
 | `L2 / R2` | Previous / next emulator |
 | `X` (long press) | Add / remove to Favorites |
 | `A` (long press) | Edit meta data / Edit keyboard config |
-
-### Quick Load / Save
-
-- In most emulators pressing `F + Y` or `F + X` will safe or load a games' state-
-- There is a list of slots you can safe games, too. You select the slot via `F + UP / DOWN`.
-- But you can also load a saved state when you are in the game list.
-- In the game list press `X` to show the saved state list.
-- Press `A` to load a state, `Y`to delete one, and `B` to cancel.
 
 ### In-game (GB, GBA, GB Color, NES, SNES, Sega, PSX)
 
@@ -206,7 +198,7 @@ See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
 
 - You can define keys to be mapped to buttons (for keyboard controlled system, e.g. Amstrad).
 - To see the current configuration `SELECT > View Pad to Keyboard Information`.
-- To edit it: `A (long press) > Edit PadToKey Profile`.
+- To edit it: `A (long press) > Edit PadToKey Profile`. 
 - This will create a configuration file in your ROMs folder, either a `.p2k.cfg`or a `.keys` file.
 - `.p2k.cfg` files have a [config style format](https://wiki.recalbox.com/en/advanced-usage/pad-to-keyboard).
   
