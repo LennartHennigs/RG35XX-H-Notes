@@ -2,7 +2,7 @@
 
 ## 05-25-2024
 
-- added Fallout instructions
+- added [Fallout 1](https://github.com/LennartHennigs/RG35XX-H-Notes#fallout1-ce---fallout-1) install and keyboard setup instructions
 
 ## 05-23-2024
 
