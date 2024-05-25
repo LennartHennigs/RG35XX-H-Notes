@@ -42,10 +42,10 @@ Follow these steps to set up get Batocera running on your device. I tried to put
 - Download Batocera for RG35XX-H called [rg35xx-cfw](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases).
 - Flash the firmware to a (new!) SD card (e.g., use [BalenaEtcher](https://etcher.balena.io/)).
 - Put the SD card in the device (left slot).
-- Turn on the device (```Long press on Power Button```).
+- Turn on the device (`Long press on Power Button`).
 - *The device will now update the file structure on the SD card*.
 - Consider setting up WiFi (see below).
-- Shut down the device (```Menu > Quit > Shutdown```).
+- Shut down the device (`Menu > Quit > Shutdown`).
 - Mount the card via your computer.
 
 ### Setting up WiFi
@@ -71,6 +71,7 @@ Follow these steps to set up get Batocera running on your device. I tried to put
 ### Enable Scraping
 
 - A scraper can download game information to your device.
+- You do need an active internet connection for this.
 - Register an account at [screenscraper.fr](https://www.screenscraper.fr/).
 - Enter your credentials at `Main Menu > Scraper`.
 
@@ -81,11 +82,11 @@ Follow these steps to set up get Batocera running on your device. I tried to put
 
 ### Update the ROM List on Each Boot
 
-- ```Main Menu > Games Settings > Netplay Settings > Index new Games```
+- `Main Menu > Games Settings > Netplay Settings > Index new Games`
 
 ### Overclock
 
-- ```Main Menu > System Settings > Overclock```
+- `Main Menu > System Settings > Overclock`
 
 ### Audio Settings
 
@@ -103,8 +104,8 @@ Follow these steps to set up get Batocera running on your device. I tried to put
 - You you will get a notification when the controller is paired to the console.
 - Run the `Controller Mapping`.
 - Adjust the `Player Assignments` to use the controller, e.g.:
-  - P1 > Controller`
-  - P2 > `#0 Deeplay-Keys'
+  - `P1 > Controller`
+  - `P2 > #0 Deeplay-Keys`
 
 #### Links
 
@@ -125,8 +126,8 @@ Follow these steps to set up get Batocera running on your device. I tried to put
 | `R3 / L3` | Next / Previous Song (Frontend Music) |
 
 - `A`+ `B` button assignment can be switched: \
-```Main Menu > System Settings > Frontend Developer Options > Switch Confirm & Cancel Buttons in EmulationStation```. I recommend doing so.
-- Shutdown the device: ```Main Menu > Quit > Shutdown System > Yes``` or press `F + POWER`.
+`Main Menu > System Settings > Frontend Developer Options > Switch Confirm & Cancel Buttons in EmulationStation`. I recommend doing so.
+- Shutdown the device: `Main Menu > Quit > Shutdown System > Yes` or press `F + POWER`.
 
 #### Links 
 
@@ -190,17 +191,17 @@ See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
 
 - You can define keys to be mapped to buttons (for keyboard controlled system, e.g. Amstrad).
 - To see the current configuration `SELECT > View Pad to Keyboard Information`.
-- To edit it: `A (long press) > Edit PadToKey Profile`
+- To edit it: `A (long press) > Edit PadToKey Profile`. 
 - This will create a configuration file in your ROMs folder, either a `.p2k.cfg`or a `.keys` file.
 - `.p2k.cfg` files have a [config style format](https://wiki.recalbox.com/en/advanced-usage/pad-to-keyboard).
-
-  ``` cfg
+  
+``` cfg
   0:select = j ;; Joystick
-  ```
+```
 
-- `.keys` files are [JSON files](https://wiki.batocera.org/remapping_controls_per_emulator).
+- `.keys` files are in [JSON files](https://wiki.batocera.org/remapping_controls_per_emulator).
 
-  ``` json
+``` json
   {
       "actions_player1": [
           {
@@ -211,10 +212,10 @@ See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
           }
       ]
   }
-  ```
-  
+```
+
 - It seems that the `.keys` file takes precedence over the `.k2p.cfg` one.
-- You can also create a key config file manually in the folder. Use the name of the rom and append the suffix.
+- You can also create a key config file manually in the folder. Use the name of the rom/port and append the suffix.
 - You can then add descriptions to the key definitions.  Both examples above add "Joystick" as a description.
 - In the `.k2p.cfg` files the buttons are called `EAST`, `WEST`. In the `.keys` they are called `A`, `Y`.
 - In the `.key` files `L1`and `R1` are called `page up` and `page down`.
@@ -225,32 +226,31 @@ See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
 - Fire and movement will automatically recognized as joystick input.
 - I suggest you bind the virtual keyboard to `R1` by assigning `F9` to it.
   
-  ``` cfg
+``` cfg
   0:r1 = F9 ;; Toggle Keyboard
-  ```
+```
 
-- FYI: Amstrad's *return* key does not equal to the `Enter` key.
+- FYI: Amstrad's *return* key does not equal to the `Enter` key. Have not found a way to map this to it.
 
 ## The SD Card
 
-- The SD card has two partitions: ```BATOCERA``` and ```SHARE```. We will only concern ourselves with the ```SHARE``` partition
-- On `SHARE` are the folders for adding content onto the device
-- The ```bios``` folder is the place where to add BIOS files (see below)
-
-- The ```roms``` folder contains folders for the different emulators for your games. Most of the folder names are self-explanatory. See below a list of specific game port folders.
+- The SD card has two partitions: `BATOCERA` and `SHARE`. We will only concern ourselves with the `SHARE` partition.
+- On `SHARE` are the folders for adding content onto the device.
+- The `bios` folder is the place where to add BIOS files (see below).
+- The `roms` folder contains folders for the different emulators for your games. Most of the folder names are self-explanatory. See below a list of specific game port folders.
 
 ## BIOS Files
 
 - Some Emulators need BIOS files to run.
 - Check for missing/needed BIOS files via: \
-```Main Menu > Game Settings > Missing Bios Check```. \
+`Main Menu > Game Settings > Missing Bios Check`. \
 You can also select `All` to see all possibly needed ROM files.
 - Or [see all needed ROMS](https://github.com/batocera-linux/batocera.linux/blob/master/package/batocera/core/batocera-scripts/scripts/batocera-systems) here.
 - Find them online...
-- Copy them in the ```bios/```folder of your SD card.
+- Copy them in the `bios/` folder of your SD card.
 - Turn on the device.
 - Check if they are correct: \
-```Main Menu > Game Settings > Missing Bios Check```
+`Main Menu > Game Settings > Missing Bios Check`
 
 ## ROM Files
 
@@ -266,9 +266,9 @@ You can also select `All` to see all possibly needed ROM files.
 - Put card in RG35XX-H.
 - Power on the device.
 - Run the Scraper \
-```Main Menu > Scraper > Scrape Now```
+`Main Menu > Scraper > Scrape Now`
 - Update the Game List \
-```Main Menu > Games Settings > Update Game List```
+`Main Menu > Games Settings > Update Game List`
 - Play!!
 
 ### Removing Apple's Dot Files
@@ -278,7 +278,7 @@ You can also select `All` to see all possibly needed ROM files.
 
 ## Emulators
 
-- This section explains for the "non-trivial" emulators (e.g. *DOS* or *Daphne *are being set up).
+- This section explains for the "non-trivial" emulators (e.g. *DOS* or *Daphne* are being set up).
 - For a list of in-game controls take a look at the [Controls](#controls) section.
 
 ### DOS
@@ -319,20 +319,20 @@ You can also select `All` to see all possibly needed ROM files.
 
   |Port Folder|Game|
   |-|-|
-  | [```cannonball```](https://wiki.batocera.org/systems:cannonball)| Out Run - Sega Arcade |
-  | [```devilutionx```](https://wiki.batocera.org/systems:devilutionx) | Diablo & Diablo Hellfire |
-  | [```eduke32```](https://wiki.batocera.org/systems:eduke32)| Duke Nukem 3D |
-  | [```fallout1-ce```](https://github.com/alexbatalov/fallout1-ce) | Fallout 1 |
-  | [```fallout2-ce```](https://github.com/alexbatalov/fallout2-ce) | Fallout 2 |
-  |[```mrboom```](https://wiki.batocera.org/systems:mrboom)| Bomberman|
+  | [`cannonball`](https://wiki.batocera.org/systems:cannonball)| Out Run - Sega Arcade |
+  | [`devilutionx`](https://wiki.batocera.org/systems:devilutionx) | Diablo & Diablo Hellfire |
+  | [`eduke32`](https://wiki.batocera.org/systems:eduke32)| Duke Nukem 3D |
+  | [`fallout1-ce`](https://github.com/alexbatalov/fallout1-ce) | Fallout 1 |
+  | [`fallout2-ce`](https://github.com/alexbatalov/fallout2-ce) | Fallout 2 |
+  |[`mrboom`](https://wiki.batocera.org/systems:mrboom)| Bomberman|
   |`ports`| Linux games|
-  | [```prboom```](https://wiki.batocera.org/systems:prboom?s[]=doom) | Doom 1 & Doom 2 |
-  |[```quake3```](https://ioquake3.org/)|Quake 3|
-  | ```scummvm``` | Scumm Engine for Games like Monkey Island |
-  | [```sdlpop```](https://wiki.batocera.org/systems:sdlpop?s[]=sdlpop)| Prince of Persia |
-  | [```tyrquake```](https://wiki.batocera.org/systems:tyrquake?s[]=tyrquake) | Quake 1 |
-  | [```vitaquake2```](https://github.com/libretro/vitaquake2)| Quake 2 |
-  | [```xash3d_fwgs```](https://wiki.batocera.org/systems:xash3d_fwgs) | Half-Life Engine |
+  | [`prboom`](https://wiki.batocera.org/systems:prboom?s[]=doom) | Doom 1 & Doom 2 |
+  |[`quake3`](https://ioquake3.org/)|Quake 3|
+  | `scummvm` | Scumm Engine for Games like Monkey Island |
+  | [`sdlpop`](https://wiki.batocera.org/systems:sdlpop?s[]=sdlpop)| Prince of Persia |
+  | [`tyrquake`](https://wiki.batocera.org/systems:tyrquake?s[]=tyrquake) | Quake 1 |
+  | [`vitaquake2`](https://github.com/libretro/vitaquake2)| Quake 2 |
+  | [`xash3d_fwgs`](https://wiki.batocera.org/systems:xash3d_fwgs) | Half-Life Engine |
 
 - Here is a link to a complete list of [available systems of Batocera Linux](https://wiki.batocera.org/systems), which will be larger than for the RG35XX-H, but still might be helpful.
 
