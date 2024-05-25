@@ -20,7 +20,7 @@
 
 ## 05-18-2024
 
-- Added *Themes* and *Retroarchivement* to the [Setting up the Device](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/main/README.md#setting-up-the-device) section
+- Added *Themes* and *RetroArchievements* to the [Setting up the Device](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/main/README.md#setting-up-the-device) section
 
 ## 05-17-2024
 

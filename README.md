@@ -42,7 +42,7 @@ Follow these steps as I tried to put them in a useful order.
 - IP Address: `Main Menu > Network Settings`
 
 - You can now also download themes and enable scraping and other tools that need an Internet connection.
-- In addition you can now find your device in your network. 
+- In addition you can now find your device in your network.
 - You can **mount** the device to copy data, **connect via SSH** or the **Emulation Station Web Service**: `http://[ip address]:1234`.
 - Username and password is: `root/linux`.
 
@@ -64,8 +64,7 @@ Follow these steps as I tried to put them in a useful order.
 ### Enable Retro Achievements
 
 - Get a login at [retroachievements.org](https://retroachievements.org).
-- Enter your credentials: `Main Menu > Game Settings > Retroarchievement Settings`.
-
+- Enter your credentials: `Main Menu > Game Settings > RetroArchievements Settings`.
 
 ### Update the ROM List on Each Boot
 
@@ -85,7 +84,7 @@ Follow these steps as I tried to put them in a useful order.
 
 ### Pairing a Bluetooth Controller
 
-- Go to `Main Menu > Controller & Bluetooth settings > Pain Bloototh Pads Automatically`.
+- Go to `Main Menu > Controller & Bluetooth settings > Pain Bluetooth Pads Automatically`.
 - Turn on Bluetooth mode on your controller (e.g. `Y + START` on an *8bitdo* Controller).
 - Enable pairing mode on your controller.
 - You you will get a notification when the controller is paired to the console.
@@ -132,9 +131,8 @@ Follow these steps as I tried to put them in a useful order.
 | `SELECT` | View Options |
 | `L1 / R1` | Page list up / down |
 | `L2 / R2` | Previous / next emulator |
-| `X` (longpress) | Add / remove to Favorites |
-| `A` (longpress) | Edit meta data / Edit keyboard config |
-
+| `X` (long press) | Add / remove to Favorites |
+| `A` (long press) | Edit meta data / Edit keyboard config |
 
 ### In-game (GB, GBA, GB Color, NES, SNES, Sega, PSX)
 
@@ -145,7 +143,7 @@ Follow these steps as I tried to put them in a useful order.
 | `F + START` | Exit Game |
 | `F + RIGHT` | Fast Forward |
 | `F + L1` | Take Screenshot |
-| `F + UP / DOWN` | Select Quck Save Slot |
+| `F + UP / DOWN` | Select Quick Save Slot |
 | `F + Y` | Quick Save Game |
 | `F + X` | Quick Load Game |
 | `F + A` | Reset Game |
@@ -161,18 +159,17 @@ Follow these steps as I tried to put them in a useful order.
 | `B` | Cancel / Back|
 | `L3` | Emulator Menu |
 | `F + Y` | Quick save game |
-| `F + X` | Quick soad game |
+| `F + X` | Quick load game |
 | `F + A` | Reset game |
 | `F + R2` | Take screenshot |
 | `F + L2 / F + R2` | Select Shader |
-
 
 ### Mapping Keys to Pad Buttons For a Single Game
 
 - You can define keys to be mapped to buttons (for keyboard controlled system, e.g. Amstrad).
 - To see the current configuration `SELECT > View Pad to Keyboard Information`.
-- To edit it: `A (longpress) > Edit PadToKey Profile`
-- This will create a configuration file in your ROMs folder, either a `.p2k.cfg`or a `.keys` file. 
+- To edit it: `A (long press) > Edit PadToKey Profile`
+- This will create a configuration file in your ROMs folder, either a `.p2k.cfg`or a `.keys` file.
 - `.p2k.cfg` files have a [config style format](https://wiki.recalbox.com/en/advanced-usage/pad-to-keyboard).
 
   ``` cfg
@@ -195,19 +192,21 @@ Follow these steps as I tried to put them in a useful order.
   ```
   
 - It seems that the `.keys` file takes precedence over the `.k2p.cfg` one.
-- You can also create a key config file manually in the folder. Use the name of the rom and append the suffix. 
+- You can also create a key config file manually in the folder. Use the name of the rom and append the suffix.
 - You can then add descriptions to the key definitions.  Both examples above add "Joystick" as a description.
 - In the `.k2p.cfg` files the buttons are called `EAST`, `WEST`. In the `.keys` they are called `A`, `Y`.
-- In the `.key` files `L1`and `R1` are called `pageup` and `pagedown`.
+- In the `.key` files `L1`and `R1` are called `page up` and `page down`.
 
 ### Amstrad
 
 - Assign the keys you need to select and start the game (see above).
-- Fire and movement will automatically recognized as joystick input. 
+- Fire and movement will automatically recognized as joystick input.
 - I suggest you bind the virtual keyboard to `R1` by assigning `F9` to it.
-  ```
+  
+  ``` cfg
   0:r1 = F9 ;; Toggle Keyboard
   ```
+
 - FYI: Amstrad's *return* key does not equal to the `Enter` key.
 
 ## The SD Card
@@ -266,7 +265,7 @@ You can also select `All` to see all possibly needed ROM files.
 - If there is a `dosbox.bat`file in the game folder, it will be executed.
 - If you start the game without a `dosbox.bat`file, you will get the start menu where you can select a file as the default executable. Use the right joystick and the `Y`key to select a file. You can also select a timeout, where the first X frames after starting a game are not shown.
 - After selecting an executable it will be run and file called `AUTOBOOT.DBP` will be created.
-- If you press `L3`, a keyboard overlay will be shown. 
+- If you press `L3`, a keyboard overlay will be shown.
 -On the top-left of the overlay keyboard there is an option to manual map keys. I think this is preferable to use the Batocera key mapping.
 
 | Button | Function |
@@ -310,14 +309,14 @@ You can also select `All` to see all possibly needed ROM files.
 
 - Always start by reading the `_info.txt` file in the emulators folder.
 
-### Devilutionx - Diablo 1 & Diablo Hellfire
+### Diablo 1 & Diablo Hellfire - Devilutionx
 
 - Copy `DIABDAT.MPQ` from the CD or Diablo-installation to `roms/devilutionx/` folder.
 - To run the Diablo: Hellfire expansion you will need to also copy `hellfire.mpq`, `hfmonk.mpq`, `hfmusic.mpq`, `hfvoice.mpq`.
 
 | Button | Function |
 |-|-|
-| `B ` | OK / Select, Use Skill |
+| `B` | OK / Select, Use Skill |
 | `A` | Cancel / Back, Use Weapon |
 | `X` | Pick up item |
 | `Y` | Use Spell |
@@ -338,7 +337,7 @@ You can also select `All` to see all possibly needed ROM files.
 
 - [Batocera > DevilutionX](https://wiki.batocera.org/systems:devilutionx)
 
-### eDuke32 - Duke Nukem 3d
+### Duke Nukem 3D - eDuke32
 
 - Create folder called `duke` in `roms/eduke32/` and copy `DUKE3D.GRP` into it.
 - Create file `Duke_Nukem_3D.eduke32` in `roms/eduke32/`.
@@ -364,10 +363,10 @@ You can also select `All` to see all possibly needed ROM files.
 - You can edit the key definitions in the game: `Options > Control Setup > Controller Setup > Button Assignment`. In there `A` and `B`, and `X`and `Y` are reversed.
 - [Batocera > eduke32](https://wiki.batocera.org/systems:eduke32)
 
-### fallout1-ce - Fallout 1
+### Fallout 1 - fallout1-ce
 
 - Copy the following files from your Fallout game into the `rom/dallout1-ce` folder:
-  -  `master.dat`
+  - `master.dat`
   - `critter.dat`
   - data folder
 - Create an empty file called `Fallout.f1ce`.
@@ -375,7 +374,7 @@ You can also select `All` to see all possibly needed ROM files.
 - Initially, only the right joystick works in the game.
 
 - Therefore, you need to define your own keys: \
-  Go to the Fallout entry in the Ports section `A (Longpress) > Edit PadToKey Profile`
+  Go to the Fallout entry in the Ports section `A (long press) > Edit PadToKey Profile`
 - Suggested key definition:
   
   | Button | Function |
@@ -398,11 +397,11 @@ You can also select `All` to see all possibly needed ROM files.
 - [Fallout Keyboard Shortcuts](https://steamuserimages-a.akamaihd.net/ugc/309990526093281327/20609414CD0D89A8776E89A49A9B9A9A90D71E39/)
 - [Fallout CE](https://github.com/alexbatalov/fallout1-ce)
 
-### fallout2-ce - Fallout 2
+### Fallout 2 - fallout2-ce
 
 *TBD*
 
-### PRBOOM – Doom 1 & Doom 2
+### Doom 1 & Doom 2 - PRBOOM
 
 - Place the `.WAD` files of Doom 1 and/or in the `roms/prboom` folder.
 - Supported wads (non exhaustive list) are from Doom 1, Doom 2, The Ultimate Doom, The Plutonia Experiment, TNT: Evilution.
@@ -431,7 +430,7 @@ You can also select `All` to see all possibly needed ROM files.
 
 - [ScummVM](https://www.scummvm.org/) is an emulator for adventures such as Monkey Island.
 - Store games in the `roms/scummvm/` folder.
-- Each game has a unique ID. You can find all games and their ID in the [compability list](https://www.scummvm.org/compatibility), e.g. use `atlantis` for **Indiana Jones and the Fate of Atlantis**.
+- Each game has a unique ID. You can find all games and their ID in the [compatibility list](https://www.scummvm.org/compatibility), e.g. use `atlantis` for **Indiana Jones and the Fate of Atlantis**.
 - Create a folder for each game and copy files into it
 - Inside the folder create a file `[id].scummvm` for each game you want to add. To be sure also write put id into the file.
 - To see what the required files for a game are take a look at the [supported games list](https://wiki.scummvm.org/index.php?title=Category:Supported_Games).
@@ -448,11 +447,11 @@ You can also select `All` to see all possibly needed ROM files.
 - [Batocera > ScummVM](https://wiki.batocera.org/systems:scummvm)
 - [Libretro > ScummVM](https://docs.libretro.com/library/scummvm/)
 
-### tyrquake - Quake 1
+### Quake 1 - tyrquake
 
 *TBD*
 
-### xash3d_fwgs - Half-Life
+### Half-Life - xash3d_fwgs
 
 - Create a folder `Half-Life`.
 - Copy the contents of `Half-Life/valve` in there
@@ -465,7 +464,8 @@ You can also select `All` to see all possibly needed ROM files.
 
 - You can view and change the controls in the game:`Configuration > Controls`.  In there `A` and `B`, and `X`and `Y`are reversed.
 
- - [Batocera > xash32_fwgs](https://wiki.batocera.org/systems:xash3d_fwgs)
+- [Batocera > xash32_fwgs](https://wiki.batocera.org/systems:xash3d_fwgs)
+
 ## Tools
 
 ### OD Commander
@@ -485,15 +485,18 @@ It is pre-installed on the device and can be found in the *Port* section.
 
 - [Batocera > OD Commander](https://wiki.batocera.org/od_commander)
 
-## Some Terms / What is...
+## Some Terms / What is... 
 
-*TBD*
+- **Batocera Linux**: An open-source operating system designed specifically for retro gaming, transforming any computer or single-board device into a gaming console. It includes a variety of pre-configured emulators and tools, making it easy to set up and use.
 
-- Batocera Linux
-- CFW
-- Batocera for RG35XX-H
-- EmulationStation
-- Libreto
+- **CFW (Custom Firmware)**: Modified firmware that enhances the capabilities and features of a device beyond what the original manufacturer provided. In the context of retro gaming, CFW allows for custom emulation setups and additional functionalities.
+
+- **Batocera for RG35XX-H**: A version of Batocera Linux tailored for the RG35XX-H handheld gaming device, optimized for performance and compatibility with the specific hardware, providing a seamless retro gaming experience.
+- **EmulationStation**: A graphical front-end for organizing and launching games on various emulators. It provides a user-friendly interface for retro gaming systems and works in conjunction with Batocera Linux to offer a streamlined gaming experience.
+
+- **Libretro**: A lightweight, modular API that enables the creation of multi-system emulators. It serves as the backbone for many emulation projects and integrates with EmulationStation, allowing it to run a wide variety of emulators through a standardized interface.
+
+These components work together to create a cohesive retro gaming system, where Batocera Linux provides the foundation, EmulationStation offers the interface, and Libretro supports the underlying emulation functionality.
 
 ## Additional Information
 
