@@ -11,7 +11,7 @@ If you find this information helpful please consider giving it a ⭐️ at GitHu
 ## Intro
 
 - Batocera is a Linux-based custom firmware (CFW) for retro gaming for multiple devices/platforms.
-- Batocera is 32-bit firmware. 
+- Batocera is 32-bit firmware.
 - There is now a port for the Anbernic RG35XX-H.
 - The current version is: [Batocera rg35xx-cfw V40](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases/tag/rg35xx_plus_h_batocera_20240306).
 - It provides a better experience than the stock firmware.
