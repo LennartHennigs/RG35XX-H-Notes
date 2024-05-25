@@ -1,11 +1,13 @@
 # Batocera on the RG35XX-H
 
-This is a living document describing what I learned setting up the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h). This file will most likely contain errors and vague information. You might not like how I describe things. I am sorry. I can't be held responsible if you break things by following this. Nor will I share with you roms, bioses, or any other files.
+This is a living document describing what I learned setting up the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h). This file will most likely contain errors and vague information. You might not like how I describe things. I am sorry. \
+I can't be held responsible if you break things by following this. \
+Nor will I share with you ROMS, BIOS, or any other files. Ask Google instead.
 
-If you find this information helpful please consider giving it a ⭐️ at GitHub.
+If you find this information helpful please consider giving it a ⭐️ at GitHub. \
 Maybe [buy me a ☕️](https://ko-fi.com/lennart0815).
 
-Take a look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/main/CHANGELOG.md) to see any recent updates.
+Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/main/CHANGELOG.md) to see recent changes.
 
 ## Table of Contents
 
