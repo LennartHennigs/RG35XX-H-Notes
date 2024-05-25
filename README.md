@@ -2,18 +2,30 @@
 
 This is a living document describing what I learned setting up the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h). This file will most likely contain errors and vague information. You might not like how I describe things. I am sorry. I can't be held responsible if you break things by following this. Nor will I share with you roms, bioses, or any other files.
 
-If you find this information helpful please consider giving it a ⭐️ at GitHub and maybe [buy me a ☕️](https://ko-fi.com/lennart0815).
+If you find this information helpful please consider giving it a ⭐️ at GitHub.
+Maybe [buy me a ☕️](https://ko-fi.com/lennart0815).
 
-- **Last update**: 05-25-24
-- Take a look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/main/CHANGELOG.md) to see any recent updates
-- **Using Version**: [Batocera rg35xx-cfw V40](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases/tag/rg35xx_plus_h_batocera_20240306)
+Take a look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/main/CHANGELOG.md) to see any recent updates.
 
-## Intro
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Setting up the device](#setting-up-the-device)
+- [Controls](#controls)
+- [The SD Card](#the-sd-card)
+- [BIOS Files](#bios-files)
+- [ROM Files](#rom-files)
+- [Workflow for adding content on SD card](#workflow-for-adding-content-on-sd-card)
+- [Emulators](#emulators)
+- [Configuring Ports](#configuring-ports)
+- [Tools](#tools)
+- [Some Terms / What is](#some-terms--what-is)
+
+## Introduction
 
 - Batocera is a Linux-based custom firmware (CFW) for retro gaming for multiple devices/platforms.
 - Batocera is 32-bit firmware.
-- There is now a port for the Anbernic RG35XX-H.
-- The current version is: [Batocera rg35xx-cfw V40](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases/tag/rg35xx_plus_h_batocera_20240306).
+- There is now a port for the Anbernic RG35XX-H, the current version is: [Batocera rg35xx-cfw V40](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases/tag/rg35xx_plus_h_batocera_20240306).
 - It provides a better experience than the stock firmware.
 - This document tries to describe how to set it up and use it.
 
@@ -25,22 +37,21 @@ Follow these steps as I tried to put them in a useful order.
 
 ### Installing Batocera on the RG35XX-H
 
-- Download Batocera for RG35XX-H called [rg35xx-cfw](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases)
-- Flash the firmware to a (new!) SD card (e.g., use [BalenaEtcher](https://etcher.balena.io/))
-- Put the SD card in the device (left slot)
-- Turn on the device (```Long press on Power Button```)
-- *The device will now update the file structure on the SD card*
-- Consider setting up WiFi (see below)
-- Shut down the device (```Menu > Quit > Shutdown```)
-- Mount the card via your computer
+- Download Batocera for RG35XX-H called [rg35xx-cfw](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases).
+- Flash the firmware to a (new!) SD card (e.g., use [BalenaEtcher](https://etcher.balena.io/)).
+- Put the SD card in the device (left slot).
+- Turn on the device (```Long press on Power Button```).
+- *The device will now update the file structure on the SD card*.
+- Consider setting up WiFi (see below).
+- Shut down the device (```Menu > Quit > Shutdown```).
+- Mount the card via your computer.
 
 ### Setting up WiFi
 
-- `Main Menu > Network Settings`
-- `Main Menu > System Settings > Frontend Developer Options > Enable web API access`
-- Now you can find your device in your network
-- IP Address: `Main Menu > Network Settings`
-
+- `Main Menu > Network Settings`.
+- `Main Menu > System Settings > Frontend Developer Options > Enable web API access`.
+- Now you can find your device in your network.
+- IP Address: `Main Menu > Network Settings`.
 - You can now also download themes and enable scraping and other tools that need an Internet connection.
 - In addition you can now find your device in your network.
 - You can **mount** the device to copy data, **connect via SSH** or the **Emulation Station Web Service**: `http://[ip address]:1234`.
@@ -93,6 +104,8 @@ Follow these steps as I tried to put them in a useful order.
   - P1 > Controller`
   - P2 > `#0 Deeplay-Keys'
 
+#### Links
+
 - [Batocera > Controller](https://wiki.batocera.org/supported_controllers)
 
 ## Controls
@@ -109,10 +122,13 @@ Follow these steps as I tried to put them in a useful order.
 | `F + POWER` | Quick Shutdown (not saving meta data) |
 | `R3 / L3` | Next / Previous Song (Frontend Music) |
 
-- **Note**: `A`+ `B` button assignment can be switched: \
+- `A`+ `B` button assignment can be switched: \
 ```Main Menu > System Settings > Frontend Developer Options > Switch Confirm & Cancel Buttons in EmulationStation```. I recommend doing so.
-- **Note**: Link to the [Batocera controls overview](https://wiki.batocera.org/basic_commands).
-- **Note**: Shutdown the device: ```Main Menu > Quit > Shutdown System > Yes``` or press `F + POWER`.
+- Shutdown the device: ```Main Menu > Quit > Shutdown System > Yes``` or press `F + POWER`.
+
+#### Links 
+
+- [Batocera > Controls Overview](https://wiki.batocera.org/basic_commands).
 
 ### Main Menu
 
@@ -163,6 +179,10 @@ Follow these steps as I tried to put them in a useful order.
 | `F + A` | Reset game |
 | `F + R2` | Take screenshot |
 | `F + L2 / F + R2` | Select Shader |
+
+### Port Controls
+
+See the [Ports](#setting-up-and-running-ports) section.
 
 ### Mapping Keys to Pad Buttons For a Single Game
 
@@ -256,6 +276,9 @@ You can also select `All` to see all possibly needed ROM files.
 
 ## Emulators
 
+- This section explains for the "non-trivial" emulators (e.g. *DOS* or *Daphne *are being set up).
+- For a list of in-game controls take a look at the [Controls](#controls) section.
+
 ### DOS
 
 - There are different DOS emulator that you can choose. Per default `DOSBox Pure` is used.
@@ -276,9 +299,15 @@ You can also select `All` to see all possibly needed ROM files.
 | `F + RIGHT` | Fast Forward |
 | `Y` | OK |
 
+#### Links
+
 - [Batocera > DOSBox Pure](https://wiki.batocera.org/systems:dos)
 - [DOSBox Pure](https://github.com/schellingb/dosbox-pure)
 - [`dosbox.conf` Settings](https://www.dosbox.com/wiki/Dosbox.conf)
+
+### Daphne
+
+*TBD*
 
 ## Setting up and Running Ports
 
@@ -303,11 +332,11 @@ You can also select `All` to see all possibly needed ROM files.
   | [```vitaquake2```](https://github.com/libretro/vitaquake2)| Quake 2 |
   | [```xash3d_fwgs```](https://wiki.batocera.org/systems:xash3d_fwgs) | Half-Life Engine |
 
-- Here is a link to a complete list of [available systems of Batocera Linux](https://wiki.batocera.org/systems), which will be larger than for the RG35XX-H but might be helpful.
+- Here is a link to a complete list of [available systems of Batocera Linux](https://wiki.batocera.org/systems), which will be larger than for the RG35XX-H, but still might be helpful.
 
 ## Configuring Ports
 
-- Always start by reading the `_info.txt` file in the emulators folder.
+Always start by reading the `_info.txt` file in the emulators folder.
 
 ### Diablo 1 & Diablo Hellfire - Devilutionx
 
@@ -335,6 +364,8 @@ You can also select `All` to see all possibly needed ROM files.
 - You can edit the key definitions in the Game: `Settings > Padmappig`.  In there `A` and `B`, and `X` and `Y` are reversed.
 - There is also a Playstation version of Diablo. Controls are nicer but graphics are more "blocky" it runs a bit less smooth.
 
+#### Links
+
 - [Batocera > DevilutionX](https://wiki.batocera.org/systems:devilutionx)
 
 ### Duke Nukem 3D - eDuke32
@@ -361,6 +392,9 @@ You can also select `All` to see all possibly needed ROM files.
 | `F + START` | Exit Emulator |
 
 - You can edit the key definitions in the game: `Options > Control Setup > Controller Setup > Button Assignment`. In there `A` and `B`, and `X`and `Y` are reversed.
+
+#### Links
+
 - [Batocera > eduke32](https://wiki.batocera.org/systems:eduke32)
 
 ### Fallout 1 - fallout1-ce
@@ -393,6 +427,8 @@ You can also select `All` to see all possibly needed ROM files.
   | Left Stick Press | Mouse Left |
   | Right Stick Press | Mouse Left |
   | Emulate Mouse Cursor | Left Analog Stick |
+
+#### Links
 
 - [Fallout Keyboard Shortcuts](https://steamuserimages-a.akamaihd.net/ugc/309990526093281327/20609414CD0D89A8776E89A49A9B9A9A90D71E39/)
 - [Fallout CE](https://github.com/alexbatalov/fallout1-ce)
@@ -444,6 +480,8 @@ You can also select `All` to see all possibly needed ROM files.
 | `X` | Skip |
 | `L2` | Settings, e.g. Save |
 
+#### Links
+
 - [Batocera > ScummVM](https://wiki.batocera.org/systems:scummvm)
 - [Libretro > ScummVM](https://docs.libretro.com/library/scummvm/)
 
@@ -464,6 +502,8 @@ You can also select `All` to see all possibly needed ROM files.
 
 - You can view and change the controls in the game:`Configuration > Controls`.  In there `A` and `B`, and `X`and `Y`are reversed.
 
+#### Links
+
 - [Batocera > xash32_fwgs](https://wiki.batocera.org/systems:xash3d_fwgs)
 
 ## Tools
@@ -483,9 +523,11 @@ It is pre-installed on the device and can be found in the *Port* section.
 | `Y` | General actions, e.g. Quit |
 | `L1 / R1` | Page up / down |
 
+#### Links
+
 - [Batocera > OD Commander](https://wiki.batocera.org/od_commander)
 
-## Some Terms / What is... 
+## Some Terms / What is
 
 - **Batocera Linux**: An open-source operating system designed specifically for retro gaming, transforming any computer or single-board device into a gaming console. It includes a variety of pre-configured emulators and tools, making it easy to set up and use.
 
@@ -497,7 +539,3 @@ It is pre-installed on the device and can be found in the *Port* section.
 - **Libretro**: A lightweight, modular API that enables the creation of multi-system emulators. It serves as the backbone for many emulation projects and integrates with EmulationStation, allowing it to run a wide variety of emulators through a standardized interface.
 
 These components work together to create a cohesive retro gaming system, where Batocera Linux provides the foundation, EmulationStation offers the interface, and Libretro supports the underlying emulation functionality.
-
-## Additional Information
-
-- *TBD*
