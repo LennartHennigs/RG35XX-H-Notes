@@ -398,7 +398,7 @@ You can also select `All` to see all possibly needed ROM files.
 - [Fallout Keyboard Shortcuts](https://steamuserimages-a.akamaihd.net/ugc/309990526093281327/20609414CD0D89A8776E89A49A9B9A9A90D71E39/)
 - [Fallout CE](https://github.com/alexbatalov/fallout1-ce)
 
-### fallout2-ce - Fallout
+### fallout2-ce - Fallout 2
 
 *TBD*
 
