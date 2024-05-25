@@ -2,10 +2,10 @@
 
 ## 05-25-2024
 
-- added [Fallout 1](https://github.com/LennartHennigs/RG35XX-H-Notes#fallout1-ce---fallout-1) installation and keyboard setup instructions
-- added [.dot_clean](https://github.com/LennartHennigs/RG35XX-H-Notes##dot_clean) script
-- added ToC to README
-
+- Added [Fallout 1](https://github.com/LennartHennigs/RG35XX-H-Notes#fallout1-ce---fallout-1) installation and keyboard setup instructions
+- Added [Nintendo DS in-game Controls](https://github.com/LennartHennigs/RG35XX-H-Notes#in-game-nintendo-ds)
+- Added [.dot_clean](https://github.com/LennartHennigs/RG35XX-H-Notes##dot_clean) script
+- Added ToC to README
 
 ## 05-23-2024
 

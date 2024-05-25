@@ -82,7 +82,7 @@ Follow these steps to set up get Batocera running on your device. I tried to put
 
 ### Update the ROM List on Each Boot
 
-- `Main Menu > Games Settings > Netplay Settings > Index new Games`
+- `Main Menu > Games Settings > Netplay Settings > Index New Games`
 
 ### Overclock
 
@@ -168,6 +168,13 @@ Follow these steps to set up get Batocera running on your device. I tried to put
 | `F + A` | Reset Game |
 | `F + R2 / L2` | Select Shader |
 | `F + B` | Emulator Menu|
+
+### In-game Nintendo DS
+
+| Button | Function |
+|-|-|
+| `R2` | Toggle Display View Mode |
+| `L2 + R2` | Toggle Single Double View Msode |
 
 ### In-game MAME
 
