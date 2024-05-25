@@ -4,7 +4,7 @@ This is a living document describing what I learned setting up the [Anbernic RG3
 
 If you find this information helpful please consider giving it a ⭐️ at GitHub and maybe [buy me a ☕️](https://ko-fi.com/lennart0815).
 
-- **Last update**: 05-23-25
+- **Last update**: 05-25-24
 - Take a look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/main/CHANGELOG.md) to see any recent updates
 - **Using Version**: [Batocera rg35xx-cfw V40](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases/tag/rg35xx_plus_h_batocera_20240306)
 
