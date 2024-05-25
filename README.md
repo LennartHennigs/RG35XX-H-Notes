@@ -33,7 +33,7 @@ Take a look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/
 
 ## Setting up the device
 
-Follow these steps as I tried to put them in a useful order.
+Follow these steps to set up get Batocera running on your device. I tried to put the steps in a helpful order.
 
 ### Installing Batocera on the RG35XX-H
 
