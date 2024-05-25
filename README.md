@@ -4,7 +4,7 @@ This is a living document describing what I learned setting up the [Anbernic RG3
 
 If you find this information helpful please consider giving it a ⭐️ at GitHub and maybe [buy me a ☕️](https://ko-fi.com/lennart0815).
 
-- **Last update**: 05-23-24
+- **Last update**: 05-23-25
 - Take a look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/main/CHANGELOG.md) to see any recent updates
 - **Using Version**: [Batocera rg35xx-cfw V40](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases/tag/rg35xx_plus_h_batocera_20240306)
 
@@ -364,9 +364,39 @@ You can also select `All` to see all possibly needed ROM files.
 - You can edit the key definitions in the game: `Options > Control Setup > Controller Setup > Button Assignment`. In there `A` and `B`, and `X`and `Y` are reversed.
 - [Batocera > eduke32](https://wiki.batocera.org/systems:eduke32)
 
-### fallout1-ce - Fallout
+### fallout1-ce - Fallout 1
 
-*TBD*
+- Copy the following files from your Fallout game into the `rom/dallout1-ce` folder:
+  -  `master.dat`
+  - `critter.dat`
+  - data folder
+- Create an empty file called `Fallout.f1ce`.
+
+- Initially, only the right joystick works in the game.
+
+- Therefore, you need to define your own keys: \
+  Go to the Fallout entry in the Ports section `A (Longpress) > Edit PadToKey Profile`
+- Suggested key definition:
+  
+  | Button | Function |
+  |-|-|
+  | `D-PAD-UP` | Cursor Up |
+  | `D-PAD-DOWN` | Cursor Down |
+  | `D-PAD-LEFT` | Cursor Left |
+  | `D-PAD-RIGHT` | Cursor Right |
+  | `START` | `ENTER` |
+  | `SELECT` | `ESC` |
+  | `EAST`| Mouse Left|
+  | `SOUTH`| Mouse Right|
+  |  `NORTH` | `S` |
+  | `WEST` | `I` |
+  | `LEFT SHOULDER` | `TAB` |
+  | Left Stick Press | Mouse Left |
+  | Right Stick Press | Mouse Left |
+  | Emulate Mouse Cursor | Left Analog Stick |
+
+- [Fallout Keyboard Shortcuts](https://steamuserimages-a.akamaihd.net/ugc/309990526093281327/20609414CD0D89A8776E89A49A9B9A9A90D71E39/)
+- [Fallout CE](https://github.com/alexbatalov/fallout1-ce)
 
 ### fallout2-ce - Fallout
 

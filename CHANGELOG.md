@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 05-25-2024
+
+- added Fallout instructions
+
 ## 05-23-2024
 
 - Added [DOS Emulator](https://github.com/LennartHennigs/RG35XX-H-Notes/tree/main?tab=readme-ov-file#dos) section
