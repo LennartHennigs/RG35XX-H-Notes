@@ -565,6 +565,11 @@ It is pre-installed on the device and can be found in the *Port* section.
 | `Y` | General actions, e.g. Quit |
 | `L1 / R1` | Page up / down |
 
+#### Links
+
+- [Batocera > OD Commander](https://wiki.batocera.org/od_commander)
+
+
 ### .dot_clean
 
 - Lets add a simple script that deletes all Mac dot_files.
@@ -609,10 +614,6 @@ For connecting a bluetooth device follow these steps:
 ### Connecting other Bluetooth Devices
 
 You can also pair keyboards, mice and audio devices (e.g. headphones) in a similar way as described above.
-
-#### Links
-
-- [Batocera > OD Commander](https://wiki.batocera.org/od_commander)
 
 ## Some Terms / What is
 
