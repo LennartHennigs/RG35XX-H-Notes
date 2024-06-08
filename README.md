@@ -23,6 +23,7 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 - [Setup and Optimize Emulators](#setup-and-optimize-emulators)
 - [Configuring Ports](#configuring-ports)
 - [Tools](#tools)
+- [Bluetooth](#bluetooth)
 - [Some Terms / What is](#some-terms--what-is)
 
 ## Introduction
@@ -101,24 +102,6 @@ Follow these steps to set up get Batocera v40 running on your device. I tried to
 - If you get no sound after you connected the console via HDMI, you need to reset the audio output:
   - Go to: `Main Menu > System Settings > Audio Output`.
   - Select `AudioCodec` and confirm. And then go back to `Auto`.
-
-### Pairing a Bluetooth Controller
-
-- Go to `Main Menu > Controller & Bluetooth settings > Pain Bluetooth Pads Automatically`.
-- Turn on Bluetooth mode on your controller (e.g. `Y + START` on an *8bitdo* Controller).
-- Enable pairing mode on your controller.
-- You you will get a notification when the controller is paired to the console.
-- Run the `Controller Mapping`.
-- Adjust the `Player Assignments` to use the controller, e.g.:
-  - `P1 > Controller`
-  - `P2 > #0 Deeplay-Keys`
-
-### Pairing other Bluetooth Devices
-
-You can also pair keyboards, mice and audio devices (e.g. headphones) in a similar way as described above.
-
-#### Links
-
 - [Batocera > Controller](https://wiki.batocera.org/supported_controllers)
 
 ## Controls
@@ -186,6 +169,8 @@ You can also pair keyboards, mice and audio devices (e.g. headphones) in a simil
 | `F + A` | Reset Game |
 | `F + R2 / L2` | Select Shader |
 | `F + B` | Emulator Menu|
+
+**Note**: To see the screenshots you took in the menu, run `Main Menu > Games Settings > Update Game List`. Then you will have a "Screenshots" section in your main menu.
 
 ### In-game Nintendo DS
 
@@ -322,10 +307,12 @@ You can also select `All` to see all possibly needed ROM files.
 
 - I have not found a way yet to access the hotkey menu or to Quick Load or Quick Save.
 
+|Button|Function|
 |-|-|
 | `F + START` | Exit Game |
 | `F + RIGHT` | Fast Forward |
 | `F + A` | Reset Game |
+| `F + L1` | Take Screenshot |
 
 - To switch the `A` and `B` buttons edit the `system\configs\mupen64\input.xml` file:
 
@@ -593,6 +580,35 @@ find /userdata/ -name "._*" -exec rm {} \;
 
 - Next, update the Game List: \
 `Main Menu > Games Settings > Update Game List`
+
+## Bluetooth
+
+For connecting a bluetooth device follow these steps:
+
+- Go to `Main Menu > Controller & Bluetooth settings > Pain Bluetooth Pads Automatically`.
+- Alternatively, run a manual detection and select your device.
+- Enable pairing mode on your device.
+- You you will get a notification when the device is paired to the console.
+
+### Connecting a Bluetooth Controller
+
+- Follow the steps above.
+- Turn on Bluetooth mode on your controller (e.g. `Y + START` on an *8bitdo* Controller).
+- Enable pairing mode on your controller.
+- Run the `Controller Mapping`.
+- Adjust the `Player Assignments` to use the controller, e.g.:
+  - `P1 > Controller`
+  - `P2 > #0 Deeplay-Keys`
+
+### Using Bluetooth Audio
+
+- Connect the audio device as described above.
+- Select the bluetooth audio device as audio output: \
+  `Main Menu > System Settings > Hardware > Audio Output > [Device]`
+
+### Connecting other Bluetooth Devices
+
+You can also pair keyboards, mice and audio devices (e.g. headphones) in a similar way as described above.
 
 #### Links
 

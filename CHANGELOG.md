@@ -4,6 +4,8 @@
 
 - Added [Nintendo 64 Optimizations](https://github.com/LennartHennigs/RG35XX-H-Notes#nintendo-64) section
 - Added [Pros and Cons](https://github.com/LennartHennigs/RG35XX-H-Notes#pros-and-cons-of-batocera) section and mention Knulli CFW
+- Created a [Bluetooth](https://github.com/LennartHennigs/RG35XX-H-Notes#bluetooth) section
+- Figured out how to connect bluetooth audio
 - Added section about connecting other bluetooth devices
 - Added note about copying data via WiFi
 - Updated note about existing WiFi problems
