@@ -613,7 +613,7 @@ For connecting a bluetooth device follow these steps:
 
 ### Connecting other Bluetooth Devices
 
-You can also pair keyboards, mice and audio devices (e.g. headphones) in a similar way as described above.
+You can also pair keyboards and mice as described above.
 
 ## Some Terms / What is
 
