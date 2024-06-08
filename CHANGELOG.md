@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 06-08-2024
+
+- Added [Nintendo 64 Optimizations](https://github.com/LennartHennigs/RG35XX-H-Notes#nintendo-64) section
+- Added [Pros and Cons](https://github.com/LennartHennigs/RG35XX-H-Notes#pros-and-cons-of-batocera) section and mention Knulli CFW
+- Added section about connecting other bluetooth devices
+- Added note about copying data via WiFi
+- Updated note about existing WiFi problems
+
 ## 05-26-2024
 
 - Added [Quick Load / Save](https://github.com/LennartHennigs/RG35XX-H-Notes#quick-load--save) commands

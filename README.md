@@ -1,24 +1,26 @@
 # Batocera on the RG35XX-H
 
-This is a living document describing what I learned setting up the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h). This file will most likely contain errors and vague information. You might not like how I describe things. I am sorry. \
-I can't be held responsible if you break things by following this. \
-Nor will I share with you ROMS, BIOS, or any other files. Ask Google instead.
+This is a living document describing what I learned setting up and running **Batocera v40** on the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h).
+
+This file will most likely contain errors and vague information. You might not like how I describe things. I am sorry. Also, I can't be held responsible if you break things by following this.Nor will I share with you ROMS, BIOS, or any other files. Ask Google instead.
 
 If you find this information helpful please consider giving it a ⭐️ at GitHub. \
 Maybe [buy me a ☕️](https://ko-fi.com/lennart0815).
 
-Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/main/CHANGELOG.md) to see recent changes.
+Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/main/CHANGELOG.md) to see recent changes to this document.
+
+*Note*: This guide is standing on the shoulder of Giants. Many of the tips here come from [beanioz on Reddit](https://www.reddit.com/r/RG35XX_Plus/comments/1b2zcyk/batocera_a_few_tips/) and other people on [Reddit](https://www.reddit.com/r/RG35XX_H/).
 
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Setting up the device](#setting-up-the-device)
+- [Setting Up The Device](#setting-up-the-device)
 - [Controls](#controls)
 - [The SD Card](#the-sd-card)
 - [BIOS Files](#bios-files)
 - [ROM Files](#rom-files)
-- [Workflow for adding content on SD card](#workflow-for-adding-content-on-sd-card)
-- [Emulators](#emulators)
+- [Workflow for Adding Content](#workflow-for-adding-content)
+- [Setup and Optimize Emulators](#setup-and-optimize-emulators)
 - [Configuring Ports](#configuring-ports)
 - [Tools](#tools)
 - [Some Terms / What is](#some-terms--what-is)
@@ -26,27 +28,30 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 ## Introduction
 
 - Batocera is a Linux-based custom firmware (CFW) for retro gaming for multiple devices/platforms.
-- Batocera is 32-bit firmware.
 - There is now a port for the Anbernic RG35XX-H, the current version is: [Batocera rg35xx-cfw V40](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases/tag/rg35xx_plus_h_batocera_20240306).
 - It provides a better experience than the stock firmware.
-- This document tries to describe how to set it up and use it.
 
-*Note*: This guide is standing on the shoulder of Giants. Many of the tips here come from [beanioz on Reddit](https://www.reddit.com/r/RG35XX_Plus/comments/1b2zcyk/batocera_a_few_tips/) and other people on Reddit.
+### Pros and Cons of Batocera
 
-## Setting up the device
+- Batocera offers more functionality than the stock firmware.
+- Its is "prettier" than the other custom firmwares, e.g. **[MuOS](https://muos.dev/)**.
+- Batocera v40 is 32-bit firmware. MuOs run 64-bit code. hus, MuOs is a bit more optimized towards the chip set.
+- [PortMaster](https://portmaster.games/) will not run on Batocera v40, as it runs on 64-bit code.
+- There is now a 64-bit port of Batocera available in an Alpha version for the RG35XX-H  called **[Knulli](https://knulli.org/)**. It supports PortMaster but not all emulators are ported yet. But it has the potential to provide a similar if not better experience than Batocera v40.
 
-Follow these steps to set up get Batocera running on your device. I tried to put the steps in a helpful order.
+## Setting Up The Device
+
+Follow these steps to set up get Batocera v40 running on your device. I tried to put the steps in a helpful order - so best follow them along...
 
 ### Installing Batocera on the RG35XX-H
 
 - Download Batocera for RG35XX-H called [rg35xx-cfw](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases).
 - Flash the firmware to a (new!) SD card (e.g., use [BalenaEtcher](https://etcher.balena.io/)).
 - Put the SD card in the device (left slot).
-- Turn on the device (`Long press on Power Button`).
+- Turn on the device (`Long-press on Power Button`).
 - *The device will now update the file structure on the SD card*.
 - Consider setting up WiFi (see below).
 - Shut down the device (`Menu > Quit > Shutdown`).
-- Mount the card via your computer.
 
 ### Setting up WiFi
 
@@ -56,10 +61,11 @@ Follow these steps to set up get Batocera running on your device. I tried to put
 - IP Address: `Main Menu > Network Settings`.
 - You can now also download themes and enable scraping and other tools that need an Internet connection.
 - In addition you can now find your device in your network.
-- You can **mount** the device to copy data, **connect via SSH** or the **Emulation Station Web Service**: `http://[ip address]:1234`.
+- You can **mount** the device to copy data, **connect via SSH** or the **Emulation Station Web Service**: \
+ `http://[ip address]:1234`.
 - Username and password is: `root/linux`.
 
-**Note**: *TBD* problems with some networks
+**Note**: The device has problems to connect to 5GHz and guest networks.
 
 ### Download Themes
 
@@ -106,6 +112,10 @@ Follow these steps to set up get Batocera running on your device. I tried to put
 - Adjust the `Player Assignments` to use the controller, e.g.:
   - `P1 > Controller`
   - `P2 > #0 Deeplay-Keys`
+
+### Pairing other Bluetooth Devices
+
+You can also pair keyboards, mice and audio devices (e.g. headphones) in a similar way as described above.
 
 #### Links
 
@@ -163,7 +173,7 @@ Follow these steps to set up get Batocera running on your device. I tried to put
 
 ### In-game (GB, GBA, GB Color, NES, SNES, Sega, PSX)
 
-- *TBD: N64, PSP*
+- *TBD: PSP*
 
 | Button | Function |
 |-|-|
@@ -207,7 +217,7 @@ See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
 - You can define keys to be mapped to buttons (for keyboard controlled system, e.g. Amstrad).
 - To see the current configuration `SELECT > View Pad to Keyboard Information`.
 - To edit it: `A (long press) > Edit PadToKey Profile`.
-- This will create a configuration file in your ROMs folder, either a `.p2k.cfg`or a `.keys` file.
+- This will create a configuration file in your `roms/` folder, either a `.p2k.cfg`or a `.keys` file.
 - `.p2k.cfg` files have a [config style format](https://wiki.recalbox.com/en/advanced-usage/pad-to-keyboard).
   
 ``` cfg
@@ -251,8 +261,8 @@ See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
 
 - The SD card has two partitions: `BATOCERA` and `SHARE`. We will only concern ourselves with the `SHARE` partition.
 - On `SHARE` are the folders for adding content onto the device.
-- The `bios` folder is the place where to add BIOS files (see below).
-- The `roms` folder contains folders for the different emulators for your games. Most of the folder names are self-explanatory. See below a list of specific game port folders.
+- The `bios/` folder is the place where to add BIOS files (see below).
+- The `roms/` folder contains folders for the different emulators for your games. Most of the folder names are self-explanatory.
 
 ## BIOS Files
 
@@ -270,13 +280,15 @@ You can also select `All` to see all possibly needed ROM files.
 ## ROM Files
 
 - Find them online...
-- Copy your files in the different 'roms/' folder.
-- Check the `_ìnfo.txt` files in each `roms` subfolder for information on file format and folder structure to set things up.
+- Copy your files in the different `roms/` folders.
+- Put your games files in the correct emulator folders.
+- Check the `_ìnfo.txt` files in each `roms/` subfolder for information on file format and folder structure to set things up.
+- See below a list of specific game port folders.
 
-## Workflow for adding content on SD card
+## Workflow for Adding Content
 
-- Copy files on the card.
-- Remove Apple's dot files, if needed.
+- Copy files on the SD card (either from your computer or via WiFi).
+- Remove Apple's dot files, if needed (see below).
 - Eject all mounted partitions.
 - Put card in RG35XX-H.
 - Power on the device.
@@ -286,27 +298,53 @@ You can also select `All` to see all possibly needed ROM files.
 `Main Menu > Games Settings > Update Game List`
 - Play!!
 
+**Note**: Alternatively, you can also connect to your device via your network and mount the `share/` folder if it is connected via WiFi. Copy your filed, update the game list, scrape, and update again.
+
 ### Removing Apple's Dot Files
 
 - On a Mac, you can run `dot_clean /Volumes/SHARE`.
-- Create a [.dot_clean](#dot_clean) script in your `ports` folder.
+- I also suggest to create a [.dot_clean](#dot_clean) script in your `ports` folder.
 
-## Emulators
+## Setup and Optimize Emulators
 
 - This section explains for the "non-trivial" emulators (e.g. *DOS* or *Daphne* are being set up).
 - For a list of in-game controls take a look at the [Controls](#controls) section.
 
+### Nintendo 64
+
+- You need to change the default emulator to make games run smooth.
+- Go to `Game Settings > Per System Advanced Configuration > Nintendo 64`.
+  - Set `Emulator: Mupen64Plus:RICE`.
+  - Set `Power Mode: High Performance`.
+  - Set `Game Aspect Ration: 4:3`.
+
+#### In-game Controls
+
+- I have not found a way yet to access the hotkey menu or to Quick Load or Quick Save.
+
+|-|-|
+| `F + START` | Exit Game |
+| `F + RIGHT` | Fast Forward |
+| `F + A` | Reset Game |
+
+- To switch the `A` and `B` buttons edit the `system\configs\mupen64\input.xml` file:
+
+``` xml
+		<input name="b"        	     value="C Button R" />
+		<input name="a"        	     value="A Button" />
+```
+
 ### DOS
 
 - There are different DOS emulator that you can choose. Per default `DOSBox Pure` is used.
-- Copy a game folder to `roms/dos`.
+- Copy a game folder to `roms/dos/`.
 - Add `.DOS` to the end of the folder name.
 - If there is a `dosbox.conf`file in the game folder, its settings will be applied.
 - If there is a `dosbox.bat`file in the game folder, it will be executed.
 - If you start the game without a `dosbox.bat`file, you will get the start menu where you can select a file as the default executable. Use the right joystick and the `Y`key to select a file. You can also select a timeout, where the first X frames after starting a game are not shown.
 - After selecting an executable it will be run and file called `AUTOBOOT.DBP` will be created.
 - If you press `L3`, a keyboard overlay will be shown.
--On the top-left of the overlay keyboard there is an option to manual map keys. I think this is preferable to use the Batocera key mapping.
+- On the top-left of the overlay keyboard there is an option to manual map keys. I think this is preferable to use the Batocera key mapping.
 
 | Button | Function |
 |-|-|
@@ -419,7 +457,7 @@ Always start by reading the `_info.txt` file in the emulators folder.
 - Copy the following files from your Fallout game into the `rom/dallout1-ce` folder:
   - `master.dat`
   - `critter.dat`
-  - data folder
+  - `data/` folder
 - Create an empty file called `Fallout.f1ce`.
 
 - Initially, only the right joystick works in the game.
@@ -456,7 +494,7 @@ Always start by reading the `_info.txt` file in the emulators folder.
 
 ### Doom 1 & Doom 2 - PRBOOM
 
-- Place the `.WAD` files of Doom 1 and/or in the `roms/prboom` folder.
+- Place the `.WAD` files of Doom 1 and/or in the `roms/prboom/` folder.
 - Supported wads (non exhaustive list) are from Doom 1, Doom 2, The Ultimate Doom, The Plutonia Experiment, TNT: Evilution.
 
 | Button | Function |
@@ -543,7 +581,7 @@ It is pre-installed on the device and can be found in the *Port* section.
 ### .dot_clean
 
 - Lets add a simple script that deletes all Mac dot_files.
-- Create a file called `.dot_clean.sh` in `roms/ports` with the following content:
+- Create a file called `.dot_clean.sh` in `roms/ports/` with the following content:
 
 ``` sh
 #!/bin/bash
@@ -552,6 +590,9 @@ It is pre-installed on the device and can be found in the *Port* section.
 find /userdata/ -name "._*" -exec rm {} \;
 
 ```
+
+- Next, update the Game List: \
+`Main Menu > Games Settings > Update Game List`
 
 #### Links
 
