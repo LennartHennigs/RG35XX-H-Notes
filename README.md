@@ -2,6 +2,8 @@
 
 This is a living document describing what I learned setting up and running **Batocera v40** on the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h).
 
+**Update**: This files is also applicable to **Knulli** versions and the **RG40XX-H**.
+
 This file will most likely contain errors and vague information. You might not like how I describe things. I am sorry. Also, I can't be held responsible if you break things by following this.Nor will I share with you ROMS, BIOS, or any other files. Ask Google instead.
 
 If you find this information helpful please consider giving it a ⭐️ at GitHub. \
@@ -232,14 +234,11 @@ See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
 
 ### Amstrad
 
+- The emulator used is [Caprice32](https://docs.libretro.com/library/caprice32/).
 - Assign the keys you need to select and start the game (see above).
 - Fire and movement will automatically recognized as joystick input.
-- I suggest you bind the virtual keyboard to `R1` by assigning `F9` to it.
-  
-``` cfg
-  0:r1 = F9 ;; Toggle Keyboard
-```
-
+- Thus, ton't map keyboard navigation to the joysticks or the D-PAD keys.
+- I suggest you bind the virtual keyboard (`F9`) to `the left analog stick click` by assigning  to it.
 - FYI: Amstrad's *return* key does not equal to the `Enter` key. Have not found a way to map this to it.
 
 ## The SD Card
