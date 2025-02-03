@@ -235,11 +235,13 @@ See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
 ### Amstrad
 
 - The emulator used is [Caprice32](https://docs.libretro.com/library/caprice32/).
-- Assign the keys you need to select and start the game (see above).
 - Fire and movement will automatically recognized as joystick input.
-- Thus, ton't map keyboard navigation to the joysticks or the D-PAD keys.
-- I suggest you bind the virtual keyboard (`F9`) to `the left analog stick click` by assigning  to it.
-- FYI: Amstrad's *return* key does not equal to the `Enter` key. Have not found a way to map this to it.
+- Therefore, don't map keyboard navigation to the joysticks or the D-PAD keys.
+- Bind the virtual keyboard (`F9`) to `the left analog stick click` for all of Amstrad, in case you need other keys. \
+  `Game Setting > Per System Advanced Configuration > Amstrad CPC > Edit PadToKey Profile > Left Stick Press = F9`
+- Only assign the keys you need to select (e.g. joustick or single player mode) and start a game. \
+  When game selected: `A (long press) > Create/Edit PadToKey Profile`
+- **FYI**: Amstrad's *return* key does not equal to the `Enter` key. I have not found a way to map this to it.
 
 ## The SD Card
 
