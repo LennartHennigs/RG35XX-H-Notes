@@ -396,26 +396,24 @@ Always start by reading the `_info.txt` file in the emulators folder.
 
 - The easiest way to download the game is to use [DepotDownloader](https://github.com/SteamRE/DepotDownloader/releases/tag/DepotDownloader_3.0.0). 
 - Download the latest version for your OS.
-- In the [SteamDB manifest list](https://steamdb.info/depot/413153/manifests/), click the copy button next to "your" release. You will get something like this in your clipboard: \ 
-  `-app 413150 -depot 413153 -manifest 8332166493523218127 -beta compatibility` \ 
+- In the [SteamDB manifest list](https://steamdb.info/depot/413153/manifests/), click the copy button next to "your" release. You will get something like this in your clipboard: \
+  `-app 413150 -depot 413153 -manifest 8332166493523218127 -beta compatibility` \
   (`8332166493523218127` refers to version 1.6.15.)
-- Use these parameters and include the -user parameter: \ 
+- Use these parameters and include the -user parameter: \
   `DepotDownloader -app 413150 -depot 413153 -manifest 8332166493523218127 -beta compatibility -user`
-- You will have to enter your Steam password to download the files. DepotDownload will download your files in a folder structure like this: \ 
+- You will have to enter your Steam password to download the files. DepotDownload will download your files in a folder structure like this: \
   `depots/413153/16826373`
 
 #### Copy files to your handheld / SD card
 
-- Copy the content of the bottom-most directory to your SD card to this folder: \ 
+- Copy the content of the bottom-most directory to your SD card to this folder: \
   <SD Card>/Ports/stardewvalley/gamedata/`
 - Done! Now, Stardew Valley should run fine.
 
 (And yes, it takes about 30 seconds for it to start. Don't worry.)
 
 **Note**: If you want to update your Stardew Valley to a new version, follow all steps and re-install Stardew Valley via Portmaster on your device.
-
 **Note**: You can also copy [savegames](https://stardewvalleywiki.com/Saves) from your computer onto your handheld and vice versa.
-
 **Note**: I recommend scaling the UI and the Zoomlevel a bit – I use 110% (in the Stardew Valley Options).
 
 ### Diablo 1 & Diablo Hellfire - Devilutionx
