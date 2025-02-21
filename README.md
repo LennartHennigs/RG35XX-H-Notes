@@ -1,8 +1,6 @@
-# Batocera on the RG35XX-H
+# Knulli Notes
 
-This is a living document describing what I learned setting up and running **Batocera v40** on the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h).
-
-**Update**: This files is also applicable to **Knulli** versions and the **RG40XX-H**.
+This is a living document describing what I learned setting up and running **Knulli** on the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h) and [Anbernic RG40XX-H](https://anbernic.com/products/rg40xx-h).
 
 This file will most likely contain errors and vague information. You might not like how I describe things. I am sorry. Also, I can't be held responsible if you break things by following this.Nor will I share with you ROMS, BIOS, or any other files. Ask Google instead.
 
@@ -30,31 +28,33 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 
 ## Introduction
 
-- Batocera is a Linux-based custom firmware (CFW) for retro gaming for multiple devices/platforms.
-- There is now a port for the Anbernic RG35XX-H, the current version is: [Batocera rg35xx-cfw V40](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases/tag/rg35xx_plus_h_batocera_20240306).
+- Knulli is a Linux-based custom firmware (CFW) for retro gaming for multiple devices/platforms.
+- It is a fork of the Batocera firmware
+- There is now a port for the Anbernic.
 - It provides a better experience than the stock firmware.
-
-### Pros and Cons of Batocera
-
-- Batocera offers more functionality than the stock firmware.
-- Its is "prettier" than the other custom firmwares, e.g. **[MuOS](https://muos.dev/)**.
-- Batocera v40 is 32-bit firmware. MuOs run 64-bit code. hus, MuOs is a bit more optimized towards the chip set.
-- [PortMaster](https://portmaster.games/) will not run on Batocera v40, as it runs on 64-bit code.
-- There is now a 64-bit port of Batocera available in an Alpha version for the RG35XX-H  called **[Knulli](https://knulli.org/)**. It supports PortMaster but not all emulators are ported yet. But it has the potential to provide a similar if not better experience than Batocera v40.
 
 ## Setting Up The Device
 
-Follow these steps to set up get Batocera v40 running on your device. I tried to put the steps in a helpful order - so best follow them along...
+- Follow these steps to set up get Knulli your device. I tried to put the steps in a helpful order - so best follow them along...
+- I recommend using two SD cards – one for Knulli and one for the roms and your Knulli settings.
+  - This has the advantage that you can update Knulli without messing up your settings or your games.
+  - The left slot will contain the Knulli card and the right the roms.
+  - Use at least a 64GB card for Knulli.
 
-### Installing Batocera on the RG35XX-H
-
-- Download Batocera for RG35XX-H called [rg35xx-cfw](https://github.com/rg35xx-cfw/rg35xx-cfw.github.io/releases).
+### Installing Knulli on the device
+- Download Knulli for your device from the [releases page](https://github.com/knulli-cfw/distribution/releases)
 - Flash the firmware to a (new!) SD card (e.g., use [BalenaEtcher](https://etcher.balena.io/)).
 - Put the SD card in the device (left slot).
 - Turn on the device (`Long-press on Power Button`).
 - *The device will now update the file structure on the SD card*.
+
+### Preparing the ROM SD card
+- You need to format your second SD card with the Linux ex4 file format (to be able to run certain ports).
+- Put the SD card in the right slot.
+- `System Settings > Storage Device > Select the new card`
+
 - Consider setting up WiFi (see below).
-- Shut down the device (`Menu > Quit > Shutdown`).
+- Reboot the device (`Menu > Quit > Restart System`).
 
 ### Setting up WiFi
 
@@ -506,15 +506,17 @@ Always start by reading the `_info.txt` file in the emulators folder.
 - You can edit the key in the game: `F + B`, `Controls > Port 1 Controls`
 
 ### ScummVM
-- [ScummVM](https://www.scummvm.org/) is an emulator for adventures such as Monkey Island.
+
+- [ScummVM](https://www.scummvm.org/) is an emulator for point-and-click adventures.
 - Store games in the `roms/scummvm/` folder.
 - Each game has a unique ID. You can find all games and their ID in the [compatibility list](https://www.scummvm.org/compatibility), e.g. use `tentacle` for **Day of the Tentacle**.
-- Create a folder for each game and copy files into it
+- Create a folder for each game and copy files into it.
 - Inside the folder create a file `[id].scummvm` for each game you want to add. To be sure also write put id into the file.
   - **Note:** _Indiana Jones and the Fate of Atlantis_ uses the id `indy4` and not `atlantis`
 - To see what the required files for a game are, look at the [supported games list](https://wiki.scummvm.org/index.php?title=Category:Supported_Games).
 
   #### Resolution Settings
+  
   - Per default, the games are not scaling to the Anbernic screen. Here are my settings to fix this:
     - Go to `Game Settings > Per System Advanced Settings > ScummVM`
     - `Scale Factor: 3x`
