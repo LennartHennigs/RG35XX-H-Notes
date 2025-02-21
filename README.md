@@ -1,15 +1,18 @@
 # Knulli on Anbernic RG-XX Devices
 
-This is a living document describing what I learned setting up and running **Knulli** on the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h) and [Anbernic RG40XX-H](https://anbernic.com/products/rg40xx-h).
+This is a living document that describes what I learned setting up and running Knulli on the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h) and [Anbernic RG40XX-H](https://anbernic.com/products/rg40xx-h).
 
-This file will most likely contain errors and vague information. You might not like how I describe things. I am sorry. Also, I can't be held responsible if you break things by following this.Nor will I share with you ROMS, BIOS, or any other files. Ask Google instead.
+This file will most likely contain errors and vague information. \
+You might not like how I describe things. I am sorry. \
+Also, I can't be held responsible if you break stuff by following this. \
+Nor will I share ROMS, BIOS, or any other files with you. Ask Google instead.
 
-If you find this information helpful please consider giving it a ⭐️ at GitHub. \
-Maybe [buy me a ☕️](https://ko-fi.com/lennart0815).
+If you find this information helpful, please consider giving it a ⭐️ at GitHub. \
+And maybe consider [buying me a ☕️](https://ko-fi.com/lennart0815).
 
 Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/main/CHANGELOG.md) to see recent changes to this document.
 
-*Note*: This guide is standing on the shoulder of Giants. Many of the tips here come from [beanioz on Reddit](https://www.reddit.com/r/RG35XX_Plus/comments/1b2zcyk/batocera_a_few_tips/) and other people on [Reddit](https://www.reddit.com/r/RG35XX_H/).
+**Note**: This guide is standing on the shoulders of giants. Many of the tips here come from [beanioz on Reddit](https://www.reddit.com/r/RG35XX_Plus/comments/1b2zcyk/batocera_a_few_tips/) and other people on [Reddit](https://www.reddit.com/r/RG35XX_H/).
 
 ## Table of Contents
 
@@ -29,19 +32,20 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 ## Introduction
 
 - Knulli is a Linux-based custom firmware (CFW) for retro gaming for multiple devices/platforms.
-- It is a fork of the Batocera firmware
+- It is a fork of the Batocera firmware.
 - There is now a port for the Anbernic.
 - It provides a better experience than the stock firmware.
 
 ## Setting Up The Device
 
-- Follow these steps to set up get Knulli your device. I tried to put the steps in a helpful order - so best follow them along...
-- I recommend using two SD cards – one for Knulli and one for the roms and your Knulli settings.
-  - This has the advantage that you can update Knulli without messing up your settings or your games.
-  - The left slot will contain the Knulli card and the right the roms.
+Follow these steps to set up Knulli on your device. I arranged the steps in a helpful order, so it is best to follow them along.
+- I recommend using two SD cards – one for Knulli and one for the ROMs and your Knulli settings.
+  - This has the advantage of updating Knulli without messing up your settings or games.
+  - The left slot will contain the Knulli card, and the right will contain the ROMs.
   - Use at least a 64GB card for Knulli.
 
 ### Installing Knulli on the device
+
 - Download Knulli for your device from the [releases page](https://github.com/knulli-cfw/distribution/releases)
 - Flash the firmware to a (new!) SD card (e.g., use [BalenaEtcher](https://etcher.balena.io/)).
 - Put the SD card in the device (left slot).
@@ -49,9 +53,10 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 - *The device will now update the file structure on the SD card*.
 
 ### Preparing the ROM SD card
+
 - You need to format your second SD card with the Linux ex4 file format (to be able to run certain ports).
 - Put the SD card in the right slot.
-- `System Settings > Storage Device > Select the new card`
+- Select the new card: `System Settings > Storage Device`.
 
 - Consider setting up WiFi (see below).
 - Reboot the device (`Menu > Quit > Restart System`).
@@ -60,7 +65,7 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 
 - `Main Menu > Network Settings`.
 - `Main Menu > System Settings > Frontend Developer Options > Enable web API access`.
-- Now you can find your device in your network.
+- Now, you can find your device in your network.
 - IP Address: `Main Menu > Network Settings`.
 - You can now also download themes and enable scraping and other tools that need an Internet connection.
 - In addition you can now find your device in your network.
@@ -101,7 +106,7 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 
 - You can disable the in-menu music in `Main Menu > Sound Settings > Frontend Music`.
 - Consider disabling `Enable Navigation Sounds`and `Enable Video Preview Audio`there, too.
-- If you get no sound after you connected the console via HDMI, you need to reset the audio output:
+- If you get no sound after you connect the console via HDMI, you need to reset the audio output:
   - Go to: `Main Menu > System Settings > Audio Output`.
   - Select `AudioCodec` and confirm. And then go back to `Auto`.
 - [Batocera > Controller](https://wiki.batocera.org/supported_controllers)
@@ -117,12 +122,12 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 
 | Button | Function |
 |-|-|
-| `POWER` | Long press to turn on. When turned on, click for stand-by. |
+| `POWER` | Long press to turn on. When turned on, click for standby. |
 | `START` | Menu |
 | `F + VOLUME` | Change brightness |
 | `B` | OK / Select |
 | `A` | Cancel / Back |
-| `F + POWER` | Quick Shutdown (not saving meta data) |
+| `F + POWER` | Quick Shutdown (not saving metadata) |
 | `R3 / L3` | Next / Previous Song (Frontend Music) |
 
 - `A`+ `B` button assignment can be switched: \
@@ -231,27 +236,16 @@ See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
   }
 ```
 
-- It seems that the `.keys` file takes precedence over the `.k2p.cfg` one.
-- You can also create a key config file manually in the folder. Use the name of the rom/port and append the suffix.
-- You can then add descriptions to the key definitions.  Both examples above add "Joystick" as a description.
+- The `.keys` file precedes the `.k2p.cfg` one.
+- You can also manually create a key config file in the folder. Use the name of the rom/port and append the suffix.
+- You can then add descriptions to the key definitions.  For both examples above, add "Joystick" as a description.
 - In the `.k2p.cfg` files the buttons are called `EAST`, `WEST`. In the `.keys` they are called `A`, `Y`.
 - In the `.key` files `L1`and `R1` are called `page up` and `page down`.
-
-### Amstrad
-
-- The emulator used is [Caprice32](https://docs.libretro.com/library/caprice32/).
-- Fire and movement will automatically recognized as joystick input.
-- Therefore, don't map keyboard navigation to the joysticks or the D-PAD keys.
-- Bind the virtual keyboard (`F9`) to `the left analog stick click` for all of Amstrad, in case you need other keys. \
-  `Game Setting > Per System Advanced Configuration > Amstrad CPC > Edit PadToKey Profile > Left Stick Press = F9`
-- Only assign the keys you need to select (e.g. joustick or single player mode) and start a game. \
-  When game selected: `A (long press) > Create/Edit PadToKey Profile`
-- **FYI**: Amstrad's *return* key does not equal to the `Enter` key. I have not found a way to map this to it.
 
 ## The SD Card
 
 - The SD card has two partitions: `BATOCERA` and `SHARE`. We will only concern ourselves with the `SHARE` partition.
-- On `SHARE` are the folders for adding content onto the device.
+- On `SHARE` are the folders for adding content to the device.
 - The `bios/` folder is the place where to add BIOS files (see below).
 - The `roms/` folder contains folders for the different emulators for your games. Most of the folder names are self-explanatory.
 
@@ -260,10 +254,10 @@ See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
 - Some Emulators need BIOS files to run.
 - Check for missing/needed BIOS files via: \
 `Main Menu > Game Settings > Missing Bios Check`. \
-You can also select `All` to see all possibly needed ROM files.
+- Or select `All` to see all possibly needed ROM files.
 - Or [see all needed ROMS](https://github.com/batocera-linux/batocera.linux/blob/master/package/batocera/core/batocera-scripts/scripts/batocera-systems) here.
 - Find them online...
-- Copy them in the `bios/` folder of your SD card.
+- Copy them into your SD card's `bios/` folder.
 - Turn on the device.
 - Check if they are correct: \
 `Main Menu > Game Settings > Missing Bios Check`
@@ -272,14 +266,14 @@ You can also select `All` to see all possibly needed ROM files.
 
 - Find them online...
 - Copy your files in the different `roms/` folders.
-- Put your games files in the correct emulator folders.
+- Put your game's files in the correct emulator folders.
 - Check the `_ìnfo.txt` files in each `roms/` subfolder for information on file format and folder structure to set things up.
-- See below a list of specific game port folders.
+- I've included a list of specific game port folders below.
 
 ## Workflow for Adding Content
 
 - Copy files on the SD card (either from your computer or via WiFi).
-- Remove Apple's dot files, if needed (see below).
+- Remove Apple's dotfiles, if needed (see below).
 - Eject all mounted partitions.
 - Put card in RG35XX-H.
 - Power on the device.
@@ -289,7 +283,7 @@ You can also select `All` to see all possibly needed ROM files.
 `Main Menu > Games Settings > Update Game List`
 - Play!!
 
-**Note**: Alternatively, you can also connect to your device via your network and mount the `share/` folder if it is connected via WiFi. Copy your filed, update the game list, scrape, and update again.
+**Note**: Alternatively, you can connect to your device via your network and mount the `share/` folder if it is connected via WiFi. Copy your filed, update the game list, scrape, and update again.
 
 ### Removing Apple's Dot Files
 
@@ -298,20 +292,30 @@ You can also select `All` to see all possibly needed ROM files.
 
 ## Setup and Optimize Emulators
 
-- This section explains for the "non-trivial" emulators (e.g. *DOS* or *Daphne* are being set up).
-- For a list of in-game controls take a look at the [Controls](#controls) section.
+- This section explains the "non-trivial" emulators (e.g. *DOS* or *Daphne* are being set up).
+- For a list of in-game controls, look at the [Controls](#controls) section.
+
+### Amstrad
+
+- The emulator used is [Caprice32](https://docs.libretro.com/library/caprice32/).
+- Fire and movement will automatically recognized as joystick input.
+- Therefore, don't map keyboard navigation to the joysticks or the D-PAD keys.
+- Bind the virtual keyboard (`F9`) to `the left analog stick click` for all of Amstrad, in case you need other keys. \
+  `Game Setting > Per System Advanced Configuration > Amstrad CPC > Edit PadToKey Profile > Left Stick Press = F9`
+- Only assign the keys you must select (e.g., joystick or single-player mode) and start a game. \
+  When a game is selected: `A (long press) > Create/Edit PadToKey Profile`
+- **FYI**: Amstrad's *return* key does not equal the `Enter` key. I have not found a way to map this to it.
 
 ### Nintendo 64
 
-- You need to change the default emulator to make games run smooth.
+- You need to change the default emulator to make games run smoothly.
 - Go to `Game Settings > Per System Advanced Configuration > Nintendo 64`.
   - Set `Emulator: Mupen64Plus:RICE`.
   - Set `Power Mode: High Performance`.
   - Set `Game Aspect Ration: 4:3`.
 
 #### In-game Controls
-
-- I have not found a way yet to access the hotkey menu or to Quick Load or Quick Save.
+- I have not yet found a way to access the hotkey menu or to _Quick Load_ or _Quick Save_.
 
 |Button|Function|
 |-|-|
@@ -320,7 +324,7 @@ You can also select `All` to see all possibly needed ROM files.
 | `F + A` | Reset Game |
 | `F + L1` | Take Screenshot |
 
-- To switch the `A` and `B` buttons edit the `system\configs\mupen64\input.xml` file:
+- To switch the `A` and `B` buttons, edit the `system\configs\mupen64\input.xml` file:
 
 ``` xml
 		<input name="b"        	     value="C Button R" />
@@ -329,15 +333,15 @@ You can also select `All` to see all possibly needed ROM files.
 
 ### DOS
 
-- There are different DOS emulator that you can choose. Per default `DOSBox Pure` is used.
+- There are different DOS emulators that you can choose. Per default, `DOSBox Pure` is used.
 - Copy a game folder to `roms/dos/`.
 - Add `.DOS` to the end of the folder name.
-- If there is a `dosbox.conf`file in the game folder, its settings will be applied.
-- If there is a `dosbox.bat`file in the game folder, it will be executed.
-- If you start the game without a `dosbox.bat`file, you will get the start menu where you can select a file as the default executable. Use the right joystick and the `Y`key to select a file. You can also select a timeout, where the first X frames after starting a game are not shown.
-- After selecting an executable it will be run and file called `AUTOBOOT.DBP` will be created.
-- If you press `L3`, a keyboard overlay will be shown.
-- On the top-left of the overlay keyboard there is an option to manual map keys. I think this is preferable to use the Batocera key mapping.
+- If there is a `dosbox.conf` file in the game folder, its settings will be applied.
+- If there is a `dosbox.bat` file in the game folder, it will be executed.
+- If you start the game without a `dosbox.bat` file, you will get the start menu where you can select a file as the default executable. Use the right joystick and the `Y`key to select a file. You can also select a timeout, where the first X frames after starting a game are not shown.
+- After selecting an executable, it will be run, and a file called `AUTOBOOT.DBP` will be created.
+- A keyboard overlay will be shown if you press `L3`.
+On the top left of the overlay keyboard, there is an option to map keys manually. However, it is preferable to use the Batocera key mapping.
 
 | Button | Function |
 |-|-|
@@ -384,7 +388,7 @@ You can also select `All` to see all possibly needed ROM files.
 
 ## Configuring Ports
 
-Always start by reading the `_info.txt` file in the emulators folder.
+Always start by reading the `_info.txt` file in the emulator's folder.
 
 ### Stardew Valley
 
@@ -423,8 +427,8 @@ Always start by reading the `_info.txt` file in the emulators folder.
 
 ### Diablo 1 & Diablo Hellfire - Devilutionx
 
-- Copy `DIABDAT.MPQ` from the CD or Diablo-installation to `roms/devilutionx/` folder.
-- To run the Diablo: Hellfire expansion you will need to also copy `hellfire.mpq`, `hfmonk.mpq`, `hfmusic.mpq`, `hfvoice.mpq`.
+- Copy `DIABDAT.MPQ` from the CD or Diablo installation to `roms/devilutionx/` folder.
+- To run the Diablo: Hellfire expansion, you will need also to copy `hellfire.mpq`, `hfmonk.mpq`, `hfmusic.mpq`, `hfvoice.mpq`.
 
 | Button | Function |
 |-|-|
@@ -443,9 +447,9 @@ Always start by reading the `_info.txt` file in the emulators folder.
 | `R2` | Inventory |
 | `R2` | Toggle Map |
 
-- You cannot edit the key definitions in the `Advanced System Options`.
-- You can edit the key definitions in the Game: `Settings > Padmappig`.  In there `A` and `B`, and `X` and `Y` are reversed.
-- There is also a Playstation version of Diablo. Controls are nicer but graphics are more "blocky" it runs a bit less smooth.
+- You cannot edit the `Advanced System Options` key definitions.
+- You can edit the key definitions in the Game: `Settings > Padmappig`.  There, `A` and `B`, and `X` and `Y` are reversed.
+- There is also a Playstation version of Diablo. The controls are nicer, but graphics are more "blocky." It runs a bit less smoothly.
 
 #### Links
 
@@ -523,7 +527,7 @@ Always start by reading the `_info.txt` file in the emulators folder.
 ### Doom 1 & Doom 2 - PRBOOM
 
 - Place the `.WAD` files of Doom 1 and/or in the `roms/prboom/` folder.
-- Supported wads (non exhaustive list) are from Doom 1, Doom 2, The Ultimate Doom, The Plutonia Experiment, TNT: Evilution.
+- Supported wads (non-exhaustive list) are from Doom 1, Doom 2, The Ultimate Doom, The Plutonia Experiment, TNT: Evilution.
 
 | Button | Function |
 |-|-|
@@ -551,18 +555,18 @@ Always start by reading the `_info.txt` file in the emulators folder.
 - Store games in the `roms/scummvm/` folder.
 - Each game has a unique ID. You can find all games and their ID in the [compatibility list](https://www.scummvm.org/compatibility), e.g. use `tentacle` for **Day of the Tentacle**.
 - Create a folder for each game and copy files into it.
-- Inside the folder create a file `[id].scummvm` for each game you want to add. To be sure also write put id into the file.
-  - **Note:** _Indiana Jones and the Fate of Atlantis_ uses the id `indy4` and not `atlantis`
+- Inside the folder, create a file called `[id].scummvm` for each game you want to add. To be sure, also write and put the ID into the file.
+- **Note:** _Indiana Jones and the Fate of Atlantis_ uses the id `indy4` and not `atlantis`
 - To see what the required files for a game are, look at the [supported games list](https://wiki.scummvm.org/index.php?title=Category:Supported_Games).
 
-  #### Resolution Settings
+#### ScummVM Resolution Settings
   
   - Per default, the games are not scaling to the Anbernic screen. Here are my settings to fix this:
     - Go to `Game Settings > Per System Advanced Settings > ScummVM`
     - `Scale Factor: 3x`
     - `Scaler Mode: ADVMAME`
       `Stretch Mode: Fit Resolution Scale`
-  - For more details see [ScummVM: Understanding the Graphics Settings](https://docs.scummvm.org/en/latest/advanced_topics/understand_graphics.html)
+  - For more details, see [ScummVM: Understanding the Graphics Settings](https://docs.scummvm.org/en/latest/advanced_topics/understand_graphics.html)
 
 | Button | Function |
 |-|-|
@@ -593,7 +597,7 @@ Always start by reading the `_info.txt` file in the emulators folder.
 | `B` | OK / Select |
 | `A` | Cancel / Back |
 
-- You can view and change the controls in the game:`Configuration > Controls`.  In there `A` and `B`, and `X`and `Y`are reversed.
+- You can view and change the controls in the game: `Configuration > Controls`.  In there `A` and `B`, and `X`and `Y`are reversed.
 
 #### Links
 
@@ -620,10 +624,9 @@ It is pre-installed on the device and can be found in the *Port* section.
 
 - [Batocera > OD Commander](https://wiki.batocera.org/od_commander)
 
-
 ### .dot_clean
 
-- Lets add a simple script that deletes all Mac dot_files.
+- Let's add a simple script that deletes all Mac dot_files.
 - Create a file called `.dot_clean.sh` in `roms/ports/` with the following content:
 
 ``` sh
@@ -639,17 +642,17 @@ find /userdata/ -name "._*" -exec rm {} \;
 
 ## Bluetooth
 
-For connecting a bluetooth device follow these steps:
+To connect a bluetooth device, follow these steps:
 
 - Go to `Main Menu > Controller & Bluetooth settings > Pain Bluetooth Pads Automatically`.
 - Alternatively, run a manual detection and select your device.
 - Enable pairing mode on your device.
-- You you will get a notification when the device is paired to the console.
+- You will get a notification when the device is paired to the console.
 
 ### Connecting a Bluetooth Controller
 
 - Follow the steps above.
-- Turn on Bluetooth mode on your controller (e.g. `Y + START` on an *8bitdo* Controller).
+- Turn on Bluetooth mode on your controller (e.g., `Y + START` on an *8bitdo* Controller).
 - Enable pairing mode on your controller.
 - Run the `Controller Mapping`.
 - Adjust the `Player Assignments` to use the controller, e.g.:
@@ -659,7 +662,7 @@ For connecting a bluetooth device follow these steps:
 ### Using Bluetooth Audio
 
 - Connect the audio device as described above.
-- Select the bluetooth audio device as audio output: \
+- Select the Bluetooth audio device as audio output: \
   `Main Menu > System Settings > Hardware > Audio Output > [Device]`
 
 ### Connecting other Bluetooth Devices
@@ -668,12 +671,13 @@ You can also pair keyboards and mice as described above.
 
 ## Some Terms / What is
 
-- **Batocera Linux**: An open-source operating system designed specifically for retro gaming, transforming any computer or single-board device into a gaming console. It includes a variety of pre-configured emulators and tools, making it easy to set up and use.
+- **Batocera Linux** is an open-source operating system designed specifically for retro gaming. It transforms any computer or single-board device into a gaming console and includes a variety of pre-configured emulators and tools, making it easy to set up and use.
 
-- **CFW (Custom Firmware)**: Modified firmware that enhances the capabilities and features of a device beyond what the original manufacturer provided. In the context of retro gaming, CFW allows for custom emulation setups and additional functionalities.
+- **CFW (Custom Firmware)** is modified firmware that enhances a device's capabilities and features beyond those provided by the original manufacturer. In the context of retro gaming, CFW allows for custom emulation setups and additional functionalities.
 
 - **Batocera for RG35XX-H**: A version of Batocera Linux tailored for the RG35XX-H handheld gaming device, optimized for performance and compatibility with the specific hardware, providing a seamless retro gaming experience.
-- **EmulationStation**: A graphical front-end for organizing and launching games on various emulators. It provides a user-friendly interface for retro gaming systems and works in conjunction with Batocera Linux to offer a streamlined gaming experience.
+
+- **EmulationStation** is a graphical front-end for organizing and launching games on various emulators. It provides a user-friendly interface for retro gaming systems and works in conjunction with Batocera Linux to offer a streamlined gaming experience.
 
 - **Libretro**: A lightweight, modular API that enables the creation of multi-system emulators. It serves as the backbone for many emulation projects and integrates with EmulationStation, allowing it to run a wide variety of emulators through a standardized interface.
 
