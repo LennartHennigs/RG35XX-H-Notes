@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 02-25-2025
+- Updated ScummVM graphics settings
+- Added correct Indy 4 ID
+- Now explaining how to install Knulli
+- Added dual SD setup guide
+
+## 02-03-2025
+- Updated Amstrad notes and keyboard mapping
+
 ## 06-08-2024
 
 - Added [Nintendo 64 Optimizations](https://github.com/LennartHennigs/RG35XX-H-Notes#nintendo-64) section
