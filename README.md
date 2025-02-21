@@ -1,4 +1,4 @@
-# Knulli Notes
+# Knulli and Anbernic RG-XX Devices
 
 This is a living document describing what I learned setting up and running **Knulli** on the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h) and [Anbernic RG40XX-H](https://anbernic.com/products/rg40xx-h).
 
