@@ -506,13 +506,21 @@ Always start by reading the `_info.txt` file in the emulators folder.
 - You can edit the key in the game: `F + B`, `Controls > Port 1 Controls`
 
 ### ScummVM
-
 - [ScummVM](https://www.scummvm.org/) is an emulator for adventures such as Monkey Island.
 - Store games in the `roms/scummvm/` folder.
-- Each game has a unique ID. You can find all games and their ID in the [compatibility list](https://www.scummvm.org/compatibility), e.g. use `atlantis` for **Indiana Jones and the Fate of Atlantis**.
+- Each game has a unique ID. You can find all games and their ID in the [compatibility list](https://www.scummvm.org/compatibility), e.g. use `tentacle` for **Day of the Tentacle**.
 - Create a folder for each game and copy files into it
 - Inside the folder create a file `[id].scummvm` for each game you want to add. To be sure also write put id into the file.
-- To see what the required files for a game are take a look at the [supported games list](https://wiki.scummvm.org/index.php?title=Category:Supported_Games).
+  - **Note:** _Indiana Jones and the Fate of Atlantis_ uses the id `indy4` and not `atlantis`
+- To see what the required files for a game are, look at the [supported games list](https://wiki.scummvm.org/index.php?title=Category:Supported_Games).
+
+  #### Resolution Settings
+  - Per default, the games are not scaling to the Anbernic screen. Here are my settings to fix this:
+    - Go to `Game Settings > Per System Advanced Settings > ScummVM`
+    - `Scale Factor: 3x`
+    - `Scaler Mode: ADVMAME`
+      `Stretch Mode: Fit Resolution Scale`
+  - For more details see [ScummVM: Understanding the Graphics Settings](https://docs.scummvm.org/en/latest/advanced_topics/understand_graphics.html)
 
 | Button | Function |
 |-|-|
