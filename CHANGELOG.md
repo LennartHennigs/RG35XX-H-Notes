@@ -6,6 +6,7 @@
   - Added correct Indy 4 ID for Scumm
 - Now explaining how to install Knulli
 - Added dual SD setup guide
+- Added analog LED lights description
 
 ## 02-03-2025
 - Updated [Amstrad notes](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes?tab=readme-ov-file#amstrad) and keyboard mapping
