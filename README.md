@@ -10,7 +10,7 @@ Nor will I share ROMS, BIOS, or any other files with you. Ask Google instead.
 If you find this information helpful, please consider giving it a ⭐️ at GitHub. \
 And maybe consider [buying me a ☕️](https://ko-fi.com/lennart0815).
 
-Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/main/CHANGELOG.md) to see recent changes to this document.
+Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/main/CHANGELOG.md) for recent changes to this document.
 
 **Note**: This guide is standing on the shoulders of giants. Many of the tips here come from [beanioz on Reddit](https://www.reddit.com/r/RG35XX_Plus/comments/1b2zcyk/batocera_a_few_tips/) and other people on [Reddit](https://www.reddit.com/r/RG35XX_H/).
 
@@ -68,10 +68,10 @@ Follow these steps to set up Knulli on your device. I arranged the steps in a he
 - Now, you can find your device in your network.
 - IP Address: `Main Menu > Network Settings`.
 - You can now also download themes and enable scraping and other tools that need an Internet connection.
-- In addition you can now find your device in your network.
+- In addition, you can now find your device on your network.
 - You can **mount** the device to copy data, **connect via SSH** or the **Emulation Station Web Service**: \
  `http://[ip address]:1234`.
-- Username and password is: `root/linux`.
+- Username and password are: `root/linux`.
 
 **Note**: The device has problems to connect to 5GHz and guest networks.
 
@@ -114,7 +114,7 @@ Follow these steps to set up Knulli on your device. I arranged the steps in a he
 ### Enable / Disable Analog Stick LEDs
 
 - To enable/disable the LED lights: `System Settings > Services > analog_stick_LED`
-- Under `Tools`you can configure the LEDs
+- Under `Tools` you can configure the LEDs.
 
 ## Controls
 
@@ -160,10 +160,10 @@ Follow these steps to set up Knulli on your device. I arranged the steps in a he
 
 ### Quick Load / Save
 
-- In most emulators pressing `F + Y` or `F + X` will safe or load a games' state-
-- There is a list of slots you can safe games, too. You select the slot via `F + UP / DOWN`.
+- In most emulators, pressing `F + Y` or `F + X` will save or load a game's state-
+- There is a list of slots you can save games, too. You select the slot via `F + UP / DOWN`.
 - But you can also load a saved state when you are in the game list.
-- In the game list press `X` to show the saved state list.
+- In the game list, press `X` to show the saved state list.
 - Press `A` to load a state, `Y`to delete one, and `B` to cancel.
 
 ### In-game (GB, GBA, GB Color, NES, SNES, Sega, PSX)
@@ -182,7 +182,7 @@ Follow these steps to set up Knulli on your device. I arranged the steps in a he
 | `F + R2 / L2` | Select Shader |
 | `F + B` | Emulator Menu|
 
-**Note**: To see the screenshots you took in the menu, run `Main Menu > Games Settings > Update Game List`. Then you will have a "Screenshots" section in your main menu.
+**Note**: To see the screenshots you took in the menu, run `Main Menu > Games Settings > Update Game List`. Then, you will have a "Screenshots" section in your main menu.
 
 ### In-game Nintendo DS
 
@@ -211,8 +211,8 @@ See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
 
 ### Mapping Keys to Pad Buttons For a Single Game
 
-- You can define keys to be mapped to buttons (for keyboard controlled system, e.g. Amstrad).
-- To see the current configuration `SELECT > View Pad to Keyboard Information`.
+- You can define keys to be mapped to buttons (for keyboard-controlled systems, e.g., Amstrad).
+- To see the current configuration, `SELECT > View Pad to Keyboard Information.`
 - To edit it: `A (long press) > Edit PadToKey Profile`.
 - This will create a configuration file in your `roms/` folder, either a `.p2k.cfg`or a `.keys` file.
 - `.p2k.cfg` files have a [config style format](https://wiki.recalbox.com/en/advanced-usage/pad-to-keyboard).
@@ -237,10 +237,10 @@ See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
 ```
 
 - The `.keys` file precedes the `.k2p.cfg` one.
-- You can also manually create a key config file in the folder. Use the name of the rom/port and append the suffix.
+- You can also manually create a key config file in the folder. Use the name of the ROM/port and append the suffix.
 - You can then add descriptions to the key definitions.  For both examples above, add "Joystick" as a description.
-- In the `.k2p.cfg` files the buttons are called `EAST`, `WEST`. In the `.keys` they are called `A`, `Y`.
-- In the `.key` files `L1`and `R1` are called `page up` and `page down`.
+- In the `.k2p.cfg` files the buttons are `EAST`, `WEST`. In the `.keys` they are called `A`, `Y`.
+- In the `.key` files, `L1 ' and `R1` are called `page up` and `page down`.
 
 ## The SD Card
 
@@ -423,7 +423,7 @@ Always start by reading the `_info.txt` file in the emulator's folder.
 
 **Note**: If you want to update your Stardew Valley to a new version, follow all steps and re-install Stardew Valley via Portmaster on your device.
 **Note**: You can also copy [savegames](https://stardewvalleywiki.com/Saves) from your computer onto your handheld and vice versa.
-**Note**: I recommend scaling the UI and the Zoomlevel a bit – I use 110% (in the Stardew Valley Options).
+**Note**: I recommend scaling the _ÙI_ and the _Zoom level_ a bit – I use 110% (set it in the Stardew Valley Options).
 
 ### Diablo 1 & Diablo Hellfire - Devilutionx
 
@@ -448,8 +448,8 @@ Always start by reading the `_info.txt` file in the emulator's folder.
 | `R2` | Toggle Map |
 
 - You cannot edit the `Advanced System Options` key definitions.
-- You can edit the key definitions in the Game: `Settings > Padmappig`.  There, `A` and `B`, and `X` and `Y` are reversed.
-- There is also a Playstation version of Diablo. The controls are nicer, but graphics are more "blocky." It runs a bit less smoothly.
+- You can edit the key definitions in the Game: `Settings > Pad mappig`.  There, `A` and `B`, and `X` and `Y` are reversed.
+- There is also a Playstation version of Diablo. The controls are nicer, but the graphics are more "blocky." It runs a bit less smoothly.
 
 #### Links
 
@@ -478,7 +478,7 @@ Always start by reading the `_info.txt` file in the emulator's folder.
 | `F + Y` | Save |
 | `F + START` | Exit Emulator |
 
-- You can edit the key definitions in the game: `Options > Control Setup > Controller Setup > Button Assignment`. In there `A` and `B`, and `X`and `Y` are reversed.
+- You can edit the key definitions in the game: `Options > Control Setup > Controller Setup > Button Assignment`. In there, `A` and `B` and `X and `Y` are reversed.
 
 #### Links
 
@@ -494,7 +494,7 @@ Always start by reading the `_info.txt` file in the emulator's folder.
 
 - Initially, only the right joystick works in the game.
 
-- Therefore, you need to define your own keys: \
+- Therefore, you need to define your keys: \
   Go to the Fallout entry in the Ports section `A (long press) > Edit PadToKey Profile`
 - Suggested key definition:
   
@@ -557,7 +557,7 @@ Always start by reading the `_info.txt` file in the emulator's folder.
 - Create a folder for each game and copy files into it.
 - Inside the folder, create a file called `[id].scummvm` for each game you want to add. To be sure, also write and put the ID into the file.
 - **Note:** _Indiana Jones and the Fate of Atlantis_ uses the id `indy4` and not `atlantis`
-- To see what the required files for a game are, look at the [supported games list](https://wiki.scummvm.org/index.php?title=Category:Supported_Games).
+The [supported games list](https://wiki.scummvm.org/index.php?title=Category:Supported_Games) shows the required files for a game.
 
 #### ScummVM Resolution Settings
   
@@ -673,12 +673,10 @@ You can also pair keyboards and mice as described above.
 
 - **Batocera Linux** is an open-source operating system designed specifically for retro gaming. It transforms any computer or single-board device into a gaming console and includes a variety of pre-configured emulators and tools, making it easy to set up and use.
 
-- **CFW (Custom Firmware)** is modified firmware that enhances a device's capabilities and features beyond those provided by the original manufacturer. In the context of retro gaming, CFW allows for custom emulation setups and additional functionalities.
+- **CFW (Custom Firmware)** is modified firmware that enhances a device's capabilities and features beyond those the original manufacturer provides. In the context of retro gaming, CFW allows for custom emulation setups and additional functionalities.
 
-- **Batocera for RG35XX-H**: A version of Batocera Linux tailored for the RG35XX-H handheld gaming device, optimized for performance and compatibility with the specific hardware, providing a seamless retro gaming experience.
+- **EmulationStation** is a graphical front-end for organizing and launching games on various emulators. It provides a user-friendly interface for retro gaming systems and works with Batocera Linux to offer a streamlined gaming experience.
 
-- **EmulationStation** is a graphical front-end for organizing and launching games on various emulators. It provides a user-friendly interface for retro gaming systems and works in conjunction with Batocera Linux to offer a streamlined gaming experience.
-
-- **Libretro**: A lightweight, modular API that enables the creation of multi-system emulators. It serves as the backbone for many emulation projects and integrates with EmulationStation, allowing it to run a wide variety of emulators through a standardized interface.
+- **Libretro**: A lightweight, modular API that enables the creation of multi-system emulators. It is the backbone for many emulation projects and integrates with EmulationStation, allowing it to run various emulators through a standardized interface.
 
 These components work together to create a cohesive retro gaming system, where Batocera Linux provides the foundation, EmulationStation offers the interface, and Libretro supports the underlying emulation functionality.
