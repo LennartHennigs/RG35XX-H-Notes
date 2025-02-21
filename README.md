@@ -407,7 +407,7 @@ Always start by reading the `_info.txt` file in the emulators folder.
 #### Copy files to your handheld / SD card
 
 - Copy the content of the bottom-most directory to your SD card to this folder: \
-  <SD Card>/Ports/stardewvalley/gamedata/`
+  `<SD Card>/Ports/stardewvalley/gamedata/`
 - Done! Now, Stardew Valley should run fine.
 
 (And yes, it takes about 30 seconds for it to start. Don't worry.)
