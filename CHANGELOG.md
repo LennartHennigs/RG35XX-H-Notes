@@ -1,13 +1,14 @@
 # CHANGELOG
 
 ## 02-25-2025
-- Updated ScummVM graphics settings
-- Added correct Indy 4 ID
+- Added [Stardew Valley](https://stardewvalleywiki.com/Saves) how-to
+- Updated [ScummVM](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes?tab=readme-ov-file#scummvm) graphics settings
+  - Added correct Indy 4 ID for Scumm
 - Now explaining how to install Knulli
 - Added dual SD setup guide
 
 ## 02-03-2025
-- Updated Amstrad notes and keyboard mapping
+- Updated [Amstrad notes](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes?tab=readme-ov-file#amstrad) and keyboard mapping
 
 ## 06-08-2024
 
