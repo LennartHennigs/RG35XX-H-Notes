@@ -106,6 +106,11 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
   - Select `AudioCodec` and confirm. And then go back to `Auto`.
 - [Batocera > Controller](https://wiki.batocera.org/supported_controllers)
 
+### Enable / Disable Analog Stick LEDs
+
+- To enable/disable the LED lights: `System Settings > Services > analog_stick_LED`
+- Under `Tools`you can configure the LEDs
+
 ## Controls
 
 ### General Navigation
