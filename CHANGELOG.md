@@ -1,6 +1,9 @@
 # CHANGELOG
 
-## 02-25-2025
+## 02-24-2025
+- Added [BG1.sh](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes/blob/main/BG1.sh), a script that allows you to launch all the GemRB games
+
+## 02-22-2025
 - Added [Stardew Valley](https://stardewvalleywiki.com/Saves) how-to
 - Updated [ScummVM](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes?tab=readme-ov-file#scummvm) graphics settings
   - Added correct Indy 4 ID for Scumm
