@@ -1,3 +1,4 @@
+
 # Knulli on Anbernic RG-XX Devices
 
 This is a living document that describes what I learned setting up and running Knulli on the [Anbernic RG35XX-H](https://anbernic.com/products/rg35xx-h) and [Anbernic RG40XX-H](https://anbernic.com/products/rg40xx-h).
@@ -17,14 +18,35 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Some Basics](#some-basics)
+  - [The SD Card](#the-sd-card)
+  - [BIOS Files](#bios-files)
+  - [ROM Files](#rom-files)
+  - [Controls](#controls)
 - [Setting Up The Device](#setting-up-the-device)
-- [Controls](#controls)
-- [The SD Card](#the-sd-card)
-- [BIOS Files](#bios-files)
-- [ROM Files](#rom-files)
+- [Additional Settings & Tipps](#additional-settings--tipps)
 - [Workflow for Adding Content](#workflow-for-adding-content)
-- [Setup and Optimize Emulators](#setup-and-optimize-emulators)
-- [Configuring Ports](#configuring-ports)
+- [Setup and Optimize Emulators](#setup-and-optimizing-emulators)
+  - [Amstrad CPC](#amstrad)
+  - [Nintendo DS](#nintendo-ds)
+  - [Nintendo 64](#nintendo-64)
+  - [MS-DOS](#ms-dos)
+  - [Playstation & Playstation Portable](#playstation--playstation-portable-ppspp)
+  - [MAME](#mame)
+- [Configuring Ports](#configuring-ports--portmaster)
+
+  - [Stardew Valley](#stardew-valley)
+  - [Balatro](#balatro)
+  - [Diablo 1 & Hellfire](#diablo-1--diablo-hellfire---devilutionx)
+  - [Duke Nukem 3D](#duke-nukem-3d---eduke32)
+  - [Fallout](#fallout-1---fallout1-ce)
+  - [Fallout 2](#fallout-2---fallout2-ce)
+  - [Doom 1 & Doom 2](#doom-1--doom-2---prboom)
+  - [ScummVM Engine](#scummvm)
+  - [Quake 1](#quake-1---tyrquake)
+  - [Quake 2](#quake-2---tyrquake)
+  - [Baldur's Gate 1 & 2, Icewind Dale 1 & 2, Planescape: Torment](#baldurs-gate-1--2-icewind-dale-1--2-planescape-torment---gemrb)
+  - [Halflife & Opposing Force & Blueshift](#half-life---xash3d_fwgs)
 - [Tools](#tools)
 - [Bluetooth](#bluetooth)
 - [Some Terms / What is](#some-terms--what-is)
@@ -36,15 +58,111 @@ Look at the [CHANGELOG](https://github.com/LennartHennigs/RG35XX-H-Notes/blob/ma
 - There is now a port for the Anbernic.
 - It provides a better experience than the stock firmware.
 
+## Some Basics
+
+### The SD Card
+
+- The SD card has two partitions: `root` and `share`. We will only concern ourselves with the `share` partition.
+- On `share` partitiion are the folders for adding content to the device.
+- The `share/bios/` folder is the place where to add BIOS files (see below).
+- The `share/roms/` folder contains folders for the different emulators for your games. Most of the folder names are self-explanatory.
+
+### BIOS Files
+
+- Some Emulators need BIOS files to run.
+- Check for missing/needed BIOS files via: \
+`Main Menu > Game Settings > Missing Bios Check`. \
+- Or select `All` to see all possibly needed ROM files.
+- Or [see all needed ROMS](https://github.com/batocera-linux/batocera.linux/blob/master/package/batocera/core/batocera-scripts/scripts/batocera-systems) here.
+- Find them online...
+- ...and copy them into your SD card's `bios/` folder.
+- To check if they are correct: \
+`Main Menu > Game Settings > Missing Bios Check`
+
+### ROM Files
+
+- Find them online...
+- Copy your files in the different `share/roms/` folders.
+- Put your game's files in the correct emulator folders.
+- Check the `_ìnfo.txt` files in each `roms/` subfolder for information on file format and folder structure to set things up.
+- I've included a list of specific game port folders below.
+
+### Controls
+
+- [Batocera > Controller](https://wiki.batocera.org/supported_controllers)
+
+#### General Navigation
+
+| Button | Function |
+|-|-|
+| `POWER` | Long press to turn on. When turned on, click for standby. |
+| `START` | Menu |
+| `F + VOLUME` | Change brightness |
+| `B` | OK / Select |
+| `A` | Cancel / Back |
+| `F + POWER` | Quick Shutdown (not saving metadata) |
+| `R3 / L3` | Next / Previous Song (Frontend Music) |
+
+- `A`+ `B` button assignment can be switched: \
+`Main Menu > System Settings > Frontend Developer Options > Switch Confirm & Cancel Buttons in EmulationStation`. I recommend doing so.
+- Shutdown the device: `Main Menu > Quit > Shutdown System > Yes` or press `F + POWER`.
+
+- See [Batocera > Controls Overview](https://wiki.batocera.org/basic_commands).
+
+#### Main Menu
+
+| Button | Function |
+|-|-|
+| `START` | Quick Access |
+| `L1 / L2` | Previous emulator |
+| `R1 / R2` | Next emulator |
+| `Y` | Quick Search |
+| `B` | Side Menu |
+
+#### Game List
+
+| Button | Function |
+|-|-|
+| `SELECT` | View Options |
+| `L1 / R1` | Page list up / down |
+| `L2 / R2` | Previous / next emulator |
+| `X` (long press) | Add / remove to Favorites |
+| `A` (long press) | Edit meta data / Edit keyboard config |
+
+#### In-game (GB, GBA, GB Color, NES, SNES, Sega, PSX)
+
+| Button | Function |
+|-|-|
+| `F + START` | Exit Game |
+| `F + RIGHT` | Fast Forward |
+| `F + L1` | Take Screenshot |
+| `F + UP / DOWN` | Select Quick Save Slot |
+| `F + Y` | Quick Save Game |
+| `F + X` | Quick Load Game |
+| `F + A` | Reset Game |
+| `F + R2 / L2` | Select Shader |
+| `F + B` | Emulator Menu|
+
+**Note**: To see the screenshots you took in the menu, run `Main Menu > Games Settings > Update Game List`. Then, you will have a "Screenshots" section in your main menu.
+
+#### Quick Load / Save
+
+- In most emulators, pressing `F + Y` or `F + X` will save or load a game's state-
+- There is a list of slots you can save games, too. You select the slot via `F + UP / DOWN`.
+- But you can also load a saved state when you are in the game list.
+- In the game list, press `X` to show the saved state list.
+- Press `A` to load a state, `Y`to delete one, and `B` to cancel.
+
 ## Setting Up The Device
 
 Follow these steps to set up Knulli on your device. I arranged the steps in a helpful order, so it is best to follow them along.
+
 - I recommend using two SD cards – one for Knulli and one for the ROMs and your Knulli settings.
   - This has the advantage of updating Knulli without messing up your settings or games.
   - The left slot will contain the Knulli card, and the right will contain the ROMs.
-  - Use at least a 64GB card for Knulli.
+  - Use at least a 32GB card for Knulli.
 
-### Installing Knulli on the device
+### Installing Knulli on your device
 
 - Download Knulli for your device from the [releases page](https://github.com/knulli-cfw/distribution/releases)
 - Flash the firmware to a (new!) SD card (e.g., use [BalenaEtcher](https://etcher.balena.io/)).
@@ -98,123 +216,97 @@ Follow these steps to set up Knulli on your device. I arranged the steps in a he
 
 - `Main Menu > Games Settings > Netplay Settings > Index New Games`
 
+## Additional Settings & Tipps
+
+### Hide UI Help
+
+- `Menu > User Interface Settings > On-Screen Help: OFF`
+
 ### Overclock
 
 - `Main Menu > System Settings > Overclock`
+- Pick what works for you.
 
 ### Audio Settings
 
 - You can disable the in-menu music in `Main Menu > Sound Settings > Frontend Music`.
+
 - Consider disabling `Enable Navigation Sounds`and `Enable Video Preview Audio`there, too.
 - If you get no sound after you connect the console via HDMI, you need to reset the audio output:
   - Go to: `Main Menu > System Settings > Audio Output`.
   - Select `AudioCodec` and confirm. And then go back to `Auto`.
-- [Batocera > Controller](https://wiki.batocera.org/supported_controllers)
 
 ### Enable / Disable Analog Stick LEDs
 
 - To enable/disable the LED lights: `System Settings > Services > analog_stick_LED`
 - Under `Tools` you can configure the LEDs.
 
-## Controls
+### Setup multiple WiFis
 
-### General Navigation
+- Open and edit the file `share/system/batocera.conf`.
+- Search for: 
 
-| Button | Function |
-|-|-|
-| `POWER` | Long press to turn on. When turned on, click for standby. |
-| `START` | Menu |
-| `F + VOLUME` | Change brightness |
-| `B` | OK / Select |
-| `A` | Cancel / Back |
-| `F + POWER` | Quick Shutdown (not saving metadata) |
-| `R3 / L3` | Next / Previous Song (Frontend Music) |
+``` sh
+# ------------ B - Network ------------ #
+```
 
-- `A`+ `B` button assignment can be switched: \
-`Main Menu > System Settings > Frontend Developer Options > Switch Confirm & Cancel Buttons in EmulationStation`. I recommend doing so.
-- Shutdown the device: `Main Menu > Quit > Shutdown System > Yes` or press `F + POWER`.
+- There you can define multiple wifis, like this: \
 
-#### Links
+``` sh
+## Wi-Fi SSID (string)
+wifi.ssid=[some id]
+## Wi-Fi KEY (string)
+## Escape your special chars (# ; $) with a backslash. eg. $ becomes \$
+wifi.key=[the password]]
 
-- [Batocera > Controls Overview](https://wiki.batocera.org/basic_commands).
+## Secondary Wi-Fi (not configurable via the user interface)
+wifi2.ssid=[some other wifi]]
+wifi2.key=[the password]]
+```
 
-### Main Menu
+- These WifFs are then automatically recognized and connected to.
 
-| Button | Function |
-|-|-|
-| `START` | Quick Access |
-| `L1 / L2` | Previous emulator |
-| `R1 / R2` | Next emulator |
-| `Y` | Quick Search |
-| `B` | Side Menu |
+### Bluetooth
 
-### Game List
+To connect a bluetooth device, follow these steps:
 
-| Button | Function |
-|-|-|
-| `SELECT` | View Options |
-| `L1 / R1` | Page list up / down |
-| `L2 / R2` | Previous / next emulator |
-| `X` (long press) | Add / remove to Favorites |
-| `A` (long press) | Edit meta data / Edit keyboard config |
+- Go to `Main Menu > Controller & Bluetooth settings > Pain Bluetooth Pads Automatically`.
+- Alternatively, run a manual detection and select your device.
+- Enable pairing mode on your device.
+- You will get a notification when the device is paired to the console.
 
-### Quick Load / Save
+#### Connecting a Bluetooth Controller
 
-- In most emulators, pressing `F + Y` or `F + X` will save or load a game's state-
-- There is a list of slots you can save games, too. You select the slot via `F + UP / DOWN`.
-- But you can also load a saved state when you are in the game list.
-- In the game list, press `X` to show the saved state list.
-- Press `A` to load a state, `Y`to delete one, and `B` to cancel.
+- Follow the steps above.
+- Turn on Bluetooth mode on your controller (e.g., `Y + START` on an *8bitdo* Controller).
+- Enable pairing mode on your controller.
+- Run the `Controller Mapping`.
+- Adjust the `Player Assignments` to use the controller, e.g.:
+  - `P1 > Controller`
+  - `P2 > #0 Deeplay-Keys`
 
-### In-game (GB, GBA, GB Color, NES, SNES, Sega, PSX)
+#### Using Bluetooth Audio
 
-- *TBD: PSP*
+- Connect the audio device as described above.
+- Select the Bluetooth audio device as audio output: \
+  `Main Menu > System Settings > Hardware > Audio Output > [Device]`
 
-| Button | Function |
-|-|-|
-| `F + START` | Exit Game |
-| `F + RIGHT` | Fast Forward |
-| `F + L1` | Take Screenshot |
-| `F + UP / DOWN` | Select Quick Save Slot |
-| `F + Y` | Quick Save Game |
-| `F + X` | Quick Load Game |
-| `F + A` | Reset Game |
-| `F + R2 / L2` | Select Shader |
-| `F + B` | Emulator Menu|
+#### Connecting other Bluetooth Devices
 
-**Note**: To see the screenshots you took in the menu, run `Main Menu > Games Settings > Update Game List`. Then, you will have a "Screenshots" section in your main menu.
-
-### In-game Nintendo DS
-
-| Button | Function |
-|-|-|
-| `R2` | Toggle Display View Mode |
-| `L2 + R2` | Toggle Single Double View Msode |
-
-### In-game MAME
-
-| Button | Function |
-|-|-|
-| `LEFT` | Insert coin (not sure if this a pre-set) |
-| `A` | OK / Select |
-| `B` | Cancel / Back|
-| `L3` | Emulator Menu |
-| `F + Y` | Quick save game |
-| `F + X` | Quick load game |
-| `F + A` | Reset game |
-| `F + R2` | Take screenshot |
-| `F + L2 / F + R2` | Select Shader |
-
-### Other Controls
-
-See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
+You can also pair keyboards and mice as described above.
 
 ### Mapping Keys to Pad Buttons For a Single Game
 
-- You can define keys to be mapped to buttons (for keyboard-controlled systems, e.g., Amstrad).
+- In general, you can define global key settings for a system go to (here Amstrad):
+`Game Setting > Per System Advanced Configuration > Amstrad CPC > Edit PadToKey Profile`
+- But you can define keys per game as well.
 - To see the current configuration, `SELECT > View Pad to Keyboard Information.`
 - To edit it: `A (long press) > Edit PadToKey Profile`.
 - This will create a configuration file in your `roms/` folder, either a `.p2k.cfg`or a `.keys` file.
+
+#### Key File Format
+
+- In general it's easier to use the UI to define keys, as described below,
 - `.p2k.cfg` files have a [config style format](https://wiki.recalbox.com/en/advanced-usage/pad-to-keyboard).
   
 ``` cfg
@@ -240,35 +332,8 @@ See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
 - You can also manually create a key config file in the folder. Use the name of the ROM/port and append the suffix.
 - You can then add descriptions to the key definitions.  For both examples above, add "Joystick" as a description.
 - In the `.k2p.cfg` files the buttons are `EAST`, `WEST`. In the `.keys` they are called `A`, `Y`.
-- In the `.key` files, `L1 ' and `R1` are called `page up` and `page down`.
-
-## The SD Card
-
-- The SD card has two partitions: `BATOCERA` and `SHARE`. We will only concern ourselves with the `SHARE` partition.
-- On `SHARE` are the folders for adding content to the device.
-- The `bios/` folder is the place where to add BIOS files (see below).
-- The `roms/` folder contains folders for the different emulators for your games. Most of the folder names are self-explanatory.
-
-## BIOS Files
-
-- Some Emulators need BIOS files to run.
-- Check for missing/needed BIOS files via: \
-`Main Menu > Game Settings > Missing Bios Check`. \
-- Or select `All` to see all possibly needed ROM files.
-- Or [see all needed ROMS](https://github.com/batocera-linux/batocera.linux/blob/master/package/batocera/core/batocera-scripts/scripts/batocera-systems) here.
-- Find them online...
-- Copy them into your SD card's `bios/` folder.
-- Turn on the device.
-- Check if they are correct: \
-`Main Menu > Game Settings > Missing Bios Check`
-
-## ROM Files
-
-- Find them online...
-- Copy your files in the different `roms/` folders.
-- Put your game's files in the correct emulator folders.
-- Check the `_ìnfo.txt` files in each `roms/` subfolder for information on file format and folder structure to set things up.
-- I've included a list of specific game port folders below.
+- In the `.key` files, `L1` and `R1` are called `page up` and `page down`.
+- The comments you enter in the key definition files will be displayed in the Key Definition UI.
 
 ## Workflow for Adding Content
 
@@ -290,21 +355,27 @@ See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
 - On a Mac, you can run `dot_clean /Volumes/SHARE`.
 - I also suggest to create a [.dot_clean](#dot_clean) script in your `ports` folder.
 
-## Setup and Optimize Emulators
+## Setup and Optimizing Emulators
 
-- This section explains the "non-trivial" emulators (e.g. *DOS* or *Daphne* are being set up).
-- For a list of in-game controls, look at the [Controls](#controls) section.
+This section explains the "non-trivial" emulators (e.g. how *DOS* or *Daphne* are being set up).
 
 ### Amstrad
 
 - The emulator used is [Caprice32](https://docs.libretro.com/library/caprice32/).
 - Fire and movement will automatically recognized as joystick input.
-- Therefore, don't map keyboard navigation to the joysticks or the D-PAD keys.
-- Bind the virtual keyboard (`F9`) to `the left analog stick click` for all of Amstrad, in case you need other keys. \
-  `Game Setting > Per System Advanced Configuration > Amstrad CPC > Edit PadToKey Profile > Left Stick Press = F9`
-- Only assign the keys you must select (e.g., joystick or single-player mode) and start a game. \
+- Therefore, **don't map keyboard navigation** to the joysticks or the D-PAD keys.
+- Bind the virtual keyboard (`F9` for Caprice32) to `the right analog stick click` for all of Amstrad, in case you need other keys. \
+  `Game Setting > Per System Advanced Configuration > Amstrad CPC > Edit PadToKey Profile > Right Stick Press = F9`
+- For a game only assign the keys to select and start a game (e.g., joystick or single-player mode). \
   When a game is selected: `A (long press) > Create/Edit PadToKey Profile`
-- **FYI**: Amstrad's *return* key does not equal the `Enter` key. I have not found a way to map this to it.
+- **Note**: Amstrad's *return* key does not equal the `Enter` key. I have not found a way to map this to it.
+
+### Nintendo DS
+
+| Button | Function |
+|-|-|
+| `R2` | Toggle Display View Mode |
+| `L2 + R2` | Toggle Single Double View Msode |
 
 ### Nintendo 64
 
@@ -313,8 +384,6 @@ See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
   - Set `Emulator: Mupen64Plus:RICE`.
   - Set `Power Mode: High Performance`.
   - Set `Game Aspect Ration: 4:3`.
-
-#### In-game Controls
 - I have not yet found a way to access the hotkey menu or to _Quick Load_ or _Quick Save_.
 
 |Button|Function|
@@ -327,11 +396,11 @@ See the [Ports](#setting-up-and-running-ports) and the [Tools](#tools) section.
 - To switch the `A` and `B` buttons, edit the `system\configs\mupen64\input.xml` file:
 
 ``` xml
-		<input name="b"        	     value="C Button R" />
-		<input name="a"        	     value="A Button" />
+  <input name="b"        	     value="C Button R" />
+  <input name="a"        	     value="A Button" />
 ```
 
-### DOS
+### MS-DOS
 
 - There are different DOS emulators that you can choose. Per default, `DOSBox Pure` is used.
 - Copy a game folder to `roms/dos/`.
@@ -357,15 +426,29 @@ On the top left of the overlay keyboard, there is an option to map keys manually
 - [DOSBox Pure](https://github.com/schellingb/dosbox-pure)
 - [`dosbox.conf` Settings](https://www.dosbox.com/wiki/Dosbox.conf)
 
-### Daphne
+### Playstation & Playstation Portable (PPSPP)
 
-*TBD*
+### MAME
+
+| Button | Function |
+|-|-|
+| `LEFT` | Insert coin (not sure if this a pre-set) |
+| `A` | OK / Select |
+| `B` | Cancel / Back|
+| `L3` | Emulator Menu |
+| `F + Y` | Quick save game |
+| `F + X` | Quick load game |
+| `F + A` | Reset game |
+| `F + R2` | Take screenshot |
+| `F + L2 / F + R2` | Select Shader |
+
+TBD
 
 ## Setting up and Running Ports
 
 ### Port Folders
   
-  This is a list of existing port folders/emulators available on the Batocera CFW by default.
+  This is a list of existing port folders/emulators available on the Knulli CFW by default.
 
   |Port Folder|Game|
   |-|-|
@@ -386,13 +469,21 @@ On the top left of the overlay keyboard, there is an option to map keys manually
 
 - Here is a link to a complete list of [available systems of Batocera Linux](https://wiki.batocera.org/systems), which will be larger than for the RG35XX-H, but still might be helpful.
 
-## Configuring Ports
+## Configuring Ports & Portmaster
 
-Always start by reading the `_info.txt` file in the emulator's folder.
+- In addition to preinstalled ports there is *Portmaster* preinstalled on Knulli.
+- *Portmaster* is a program that that allows you to install and manage “game ports”—that is, Linux-native versions or open-source re-implementations of classic and modern games.
+- Often you need to copy the original game files into the folder of installed ports.
+
+- **Note**: If your ROM SD card is not `ext4` formatted, some ports will not run.
+- **Note**: Always start by reading the `_info.txt` file in the emulator's folder.
+
+Here are some popular ports that run on the RGXX device (see how-tos below):
 
 ### Stardew Valley
 
 #### Prerequisites
+
 - You bought Stardew Valley on Steam.
 - you installed the Stardew Valley port via Portmaster on your handheld.
 
@@ -424,6 +515,10 @@ Always start by reading the `_info.txt` file in the emulator's folder.
 **Note**: If you want to update your Stardew Valley to a new version, follow all steps and re-install Stardew Valley via Portmaster on your device.
 **Note**: You can also copy [savegames](https://stardewvalleywiki.com/Saves) from your computer onto your handheld and vice versa.
 **Note**: I recommend scaling the _ÙI_ and the _Zoom level_ a bit – I use 110% (set it in the Stardew Valley Options).
+
+### Balatro
+
+ TBD
 
 ### Diablo 1 & Diablo Hellfire - Devilutionx
 
@@ -478,7 +573,7 @@ Always start by reading the `_info.txt` file in the emulator's folder.
 | `F + Y` | Save |
 | `F + START` | Exit Emulator |
 
-- You can edit the key definitions in the game: `Options > Control Setup > Controller Setup > Button Assignment`. In there, `A` and `B` and `X and `Y` are reversed.
+- You can edit the key definitions in the game: `Options > Control Setup > Controller Setup > Button Assignment`. In there, `A` and `B` and `X` and `Y` are reversed.
 
 #### Links
 
@@ -561,12 +656,13 @@ The [supported games list](https://wiki.scummvm.org/index.php?title=Category:Sup
 
 #### ScummVM Resolution Settings
   
-  - Per default, the games are not scaling to the Anbernic screen. Here are my settings to fix this:
-    - Go to `Game Settings > Per System Advanced Settings > ScummVM`
-    - `Scale Factor: 3x`
-    - `Scaler Mode: ADVMAME`
+- Per default, the games are not scaling to the Anbernic screen. Here are my settings to fix this:
+  - Go to `Game Settings > Per System Advanced Settings > ScummVM`
+  - `Scale Factor: 3x`
+  - `Scaler Mode: ADVMAME`
       `Stretch Mode: Fit Resolution Scale`
-  - For more details, see [ScummVM: Understanding the Graphics Settings](https://docs.scummvm.org/en/latest/advanced_topics/understand_graphics.html)
+  
+- For more details, see [ScummVM: Understanding the Graphics  Settings](https://docs.scummvm.org/en/latest/advanced_topics/understand_graphics.html)
 
 | Button | Function |
 |-|-|
@@ -585,6 +681,12 @@ The [supported games list](https://wiki.scummvm.org/index.php?title=Category:Sup
 ### Quake 1 - tyrquake
 
 *TBD*
+
+### Quake 2 - tyrquake
+
+*TBD*
+
+### Baldur's Gate 1 & 2, Icewind Dale 1 & 2, Planescape: Torment - GemRB
 
 ### Half-Life - xash3d_fwgs
 
@@ -620,9 +722,7 @@ It is pre-installed on the device and can be found in the *Port* section.
 | `Y` | General actions, e.g. Quit |
 | `L1 / R1` | Page up / down |
 
-#### Links
-
-- [Batocera > OD Commander](https://wiki.batocera.org/od_commander)
+- Link: [Batocera > OD Commander](https://wiki.batocera.org/od_commander)
 
 ### .dot_clean
 
@@ -640,36 +740,8 @@ find /userdata/ -name "._*" -exec rm {} \;
 - Next, update the Game List: \
 `Main Menu > Games Settings > Update Game List`
 
-## Bluetooth
 
-To connect a bluetooth device, follow these steps:
-
-- Go to `Main Menu > Controller & Bluetooth settings > Pain Bluetooth Pads Automatically`.
-- Alternatively, run a manual detection and select your device.
-- Enable pairing mode on your device.
-- You will get a notification when the device is paired to the console.
-
-### Connecting a Bluetooth Controller
-
-- Follow the steps above.
-- Turn on Bluetooth mode on your controller (e.g., `Y + START` on an *8bitdo* Controller).
-- Enable pairing mode on your controller.
-- Run the `Controller Mapping`.
-- Adjust the `Player Assignments` to use the controller, e.g.:
-  - `P1 > Controller`
-  - `P2 > #0 Deeplay-Keys`
-
-### Using Bluetooth Audio
-
-- Connect the audio device as described above.
-- Select the Bluetooth audio device as audio output: \
-  `Main Menu > System Settings > Hardware > Audio Output > [Device]`
-
-### Connecting other Bluetooth Devices
-
-You can also pair keyboards and mice as described above.
-
-## Some Terms / What is
+## Some Terms / What is...
 
 - **Batocera Linux** is an open-source operating system designed specifically for retro gaming. It transforms any computer or single-board device into a gaming console and includes a variety of pre-configured emulators and tools, making it easy to set up and use.
 

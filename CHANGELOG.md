@@ -1,9 +1,22 @@
 # CHANGELOG
 
+## 02-25-2025
+
+- added scripts for all GemRB games (Baldur's Gate, ...)
+- added section on how to define multiple known wifis
+- added how to hide the on-screen help
+- clarified key mapping sections
+- clarified ports section
+- fixed some small incorrectness and typos
+- reordered document
+
 ## 02-24-2025
+
 - Added [BG1.sh](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes/blob/main/BG1.sh), a script that allows you to launch all the GemRB games
+- Updated the custom key definition section.
 
 ## 02-22-2025
+
 - Added [Stardew Valley](https://stardewvalleywiki.com/Saves) how-to
 - Updated [ScummVM](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes?tab=readme-ov-file#scummvm) graphics settings
   - Added correct Indy 4 ID for Scumm
@@ -12,6 +25,7 @@
 - Added analog LED lights description
 
 ## 02-03-2025
+
 - Updated [Amstrad notes](https://github.com/LennartHennigs/Knulli-and-RGXX-Notes?tab=readme-ov-file#amstrad) and keyboard mapping
 
 ## 06-08-2024
